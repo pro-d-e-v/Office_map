@@ -6,7 +6,7 @@ Interactive **vector** maps for WordPress, built on **MapLibre GL JS** and open
 * Shortcode: `[office_map]`
 * Widget: "Office Map"
 * Visual settings page with a live preview
-* 17 stylable layer categories, Google/Yandex-like presets, multilingual labels
+* 17 stylable layer categories, ready-made look presets, multilingual labels
 * Optional address search (off by default)
 * Import / export of all settings as JSON
 

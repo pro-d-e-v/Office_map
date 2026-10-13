@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Office Map – OpenStreetMap Map Without API Key
  * Plugin URI:  https://wordpress.org/plugins/office-map/
- * Description: Interactive vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor. Style presets inspired by Google Maps and Yandex Maps.
+ * Description: Interactive vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor, with ready-made look presets and 17 stylable layers.
  * Version:     1.9.0
  * Requires at least: 6.0
  * Requires PHP: 7.4

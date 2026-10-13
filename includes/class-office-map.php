@@ -140,8 +140,8 @@ class Office_Map {
 	public static function palettes() {
 		return array(
 			'original' => __( 'Original (as in OpenFreeMap)', 'office-map' ),
-			'google'   => __( 'Similar to Google Maps', 'office-map' ),
-			'yandex'   => __( 'Similar to Yandex Maps', 'office-map' ),
+			'google'   => __( 'Bright and detailed', 'office-map' ),
+			'yandex'   => __( 'Warm and muted', 'office-map' ),
 		);
 	}
 

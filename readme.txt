@@ -22,7 +22,7 @@ It is perfect for an office or contact page, or for several locations. Drop the 
 * **Truly key-free.** No credit card, no quota and no "invalid API key" failures.
 * **Privacy-friendly by default.** The map loads without accounts or analytics, and the optional address search can be turned off completely.
 * **Fine-grained styling.** Recolor 17 layer categories (roads, water, parks, buildings, labels, POI and more) and hide anything you don't need.
-* **One-click look presets** inspired by Google Maps and Yandex Maps.
+* **One-click look presets** — a bright detailed palette and a warm muted palette.
 * **Multilingual labels** (Russian, English, Belarusian, German, Polish and more).
 
 = Features =
@@ -44,7 +44,7 @@ The simplest form uses the settings from the plugin page:
 
 You can override individual options:
 
-`[office_map lat="53.9006" lng="27.5590" zoom="16" height="420" title="Our office" style="liberty" palette="google"]`
+`[office_map lat="53.9006" lng="27.5590" zoom="16" height="420" title="Our office" style="liberty"]`
 
 = External services =
 

@@ -20,8 +20,8 @@ msgstr "Office Map – карта OpenStreetMap без API-ключа"
 msgid "https://wordpress.org/plugins/office-map/"
 msgstr ""
 
-msgid "Interactive vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor. Style presets inspired by Google Maps and Yandex Maps."
-msgstr "Интерактивные векторные карты на OpenStreetMap и MapLibre GL — без API-ключей, рекламы и отслеживания. Шорткод, виджет и визуальный редактор стиля. Пресеты оформления в стиле Google Maps и Яндекс.Карт."
+msgid "Interactive vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor, with ready-made look presets and 17 stylable layers."
+msgstr "Интерактивные векторные карты на OpenStreetMap и MapLibre GL — без API-ключей, рекламы и отслеживания. Шорткод, виджет и визуальный редактор стиля с готовыми пресетами оформления и 17 настраиваемыми слоями."
 
 msgid "Prodevel"
 msgstr ""
@@ -371,9 +371,6 @@ msgstr "Карта офиса (MapLibre + OpenStreetMap) без Google и Янд
 msgid "Title"
 msgstr "Заголовок"
 
-msgid "Palette (original/google/yandex)"
-msgstr "Палитра (original/google/yandex)"
-
 msgid "Empty fields use the values from the Office Map settings page."
 msgstr "Пустые поля используют значения со страницы настроек Office Map."
 
@@ -395,11 +392,11 @@ msgstr "Fiord (холодный, приглушённый)"
 msgid "Original (as in OpenFreeMap)"
 msgstr "Оригинальная (как в OpenFreeMap)"
 
-msgid "Similar to Google Maps"
-msgstr "Как в Google Maps"
+msgid "Bright and detailed"
+msgstr "Яркая и подробная"
 
-msgid "Similar to Yandex Maps"
-msgstr "Как в Яндекс.Картах"
+msgid "Warm and muted"
+msgstr "Тёплая и приглушённая"
 
 msgid "Block (container width)"
 msgstr "Блок (ширина контейнера)"

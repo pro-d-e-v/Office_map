@@ -72,7 +72,7 @@ class Office_Map_Widget extends WP_Widget {
 			'lng'     => array( __( 'Longitude (lng)', 'office-map' ), '' ),
 			'zoom'    => array( __( 'Zoom', 'office-map' ), '16' ),
 			'height'  => array( __( 'Height, px', 'office-map' ), '320' ),
-			'palette' => array( __( 'Palette (original/google/yandex)', 'office-map' ), '' ),
+			'palette' => array( __( 'Palette', 'office-map' ), '' ),
 		);
 
 		foreach ( $fields as $key => $meta ) {

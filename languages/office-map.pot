@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-13T16:27:54+08:00\n"
+"POT-Creation-Date: 2026-10-13T16:40:40+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: office-map\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the plugin
 #: office-map.php
-msgid "Interactive vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor. Style presets inspired by Google Maps and Yandex Maps."
+msgid "Interactive vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor, with ready-made look presets and 17 stylable layers."
 msgstr ""
 
 #. Author of the plugin
@@ -202,6 +202,7 @@ msgid "Base style"
 msgstr ""
 
 #: includes/class-office-map-settings.php:241
+#: includes/class-office-map-widget.php:75
 msgid "Palette"
 msgstr ""
 
@@ -522,10 +523,6 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/class-office-map-widget.php:75
-msgid "Palette (original/google/yandex)"
-msgstr ""
-
 #: includes/class-office-map-widget.php:88
 msgid "Empty fields use the values from the Office Map settings page."
 msgstr ""
@@ -555,11 +552,11 @@ msgid "Original (as in OpenFreeMap)"
 msgstr ""
 
 #: includes/class-office-map.php:143
-msgid "Similar to Google Maps"
+msgid "Bright and detailed"
 msgstr ""
 
 #: includes/class-office-map.php:144
-msgid "Similar to Yandex Maps"
+msgid "Warm and muted"
 msgstr ""
 
 #: includes/class-office-map.php:155
