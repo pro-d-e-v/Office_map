@@ -1,6 +1,6 @@
 /**
- * Office Map — админ: сохранение по кнопке в каждом блоке, свой маркер,
- * список дополнительных меток и поиск адреса.
+ * Office Map — admin: per-block save button, custom marker,
+ * additional markers list and address search.
  */
 (function ($) {
 	'use strict';
@@ -21,12 +21,12 @@
 		return;
 	}
 
-	/* ---------------------------------------------------- сохранение */
+	/* ------------------------------------------------------- saving */
 
-	// Кнопки «Сохранить» — обычные submit: форма уходит в options.php,
-	// WordPress сохраняет настройки и перезагружает страницу с новым превью.
+	// The "Save" buttons are plain submits: the form goes to options.php,
+	// WordPress stores the settings and reloads the page with a fresh preview.
 
-	// Подсветить кнопки, пока есть несохранённые изменения.
+	// Highlight the buttons while there are unsaved changes.
 	function markDirty() {
 		$('.office-map-save').addClass('is-dirty');
 	}
@@ -48,7 +48,7 @@
 	}
 
 	$(function () {
-		// Все простые цветовые поля (маркер, точка, поиск и т.п.) — кроме таблицы стилей и шаблона точки.
+		// All simple color fields (marker, point, search, etc.) — except the styles table and the point template.
 		$('.office-map-color').each(function () {
 			if ($(this).closest('#office-map-style-colors, .office-map-point-template').length) { return; }
 			$(this).wpColorPicker({ change: markDirty, clear: markDirty });
@@ -71,7 +71,7 @@
 		syncStyleRowState($(this));
 	});
 
-	// Ползунок прозрачности ↔ числовое поле (и авто-включение слоя).
+	// Opacity slider ↔ number field (and auto-enabling of the layer).
 	$(document).on('input', '.office-map-opacity-range', function () {
 		$(this).closest('.office-map-opacity').find('.office-map-opacity-num').val(this.value);
 		enableStyleRow($(this));
@@ -89,7 +89,7 @@
 		markDirty();
 	});
 
-	/* ---------------------------------------------------- медиабиблиотека */
+	/* ------------------------------------------------------- media library */
 
 	var frame = null;
 	var mediaTarget = null;
@@ -125,7 +125,7 @@
 		markDirty();
 	});
 
-	/* ---------------------------------------------------- поиск адреса */
+	/* ------------------------------------------------------- address search */
 
 	function targets($box) {
 		var latSel = $box.data('lat');
@@ -213,7 +213,7 @@
 		e.stopPropagation();
 	});
 
-	/* ---------------------------------------------------- список меток */
+	/* ------------------------------------------------------- markers list */
 
 	var uid = 1000;
 
@@ -239,14 +239,14 @@
 		markDirty();
 	});
 
-	/* ---------------------------------------------------- компактная сетка */
+	/* ------------------------------------------------------- compact grid */
 
 	function fieldEl(key) {
 		return form.querySelector('[name="office_map_options[' + key + ']"]');
 	}
 
-	// Условный показ полей по значению другого поля
-	// (например, «Приближение (zoom)» — только при фиксированном зуме).
+	// Conditionally show fields based on another field's value
+	// (for example "Zoom" — only in fixed zoom mode).
 	function syncCondFields() {
 		Array.prototype.forEach.call(form.querySelectorAll('[data-cond-field]'), function (el) {
 			var field = el.getAttribute('data-cond-field');
@@ -256,7 +256,7 @@
 			el.style.display = (cur === want) ? '' : 'none';
 		});
 
-		// «Значение» и «Единица» ширины — только для пресета «Своя».
+		// Width "Value" and "Unit" — only for the "Custom" preset.
 		var wp = fieldEl('width_preset');
 		var custom = wp && wp.value === 'custom';
 		Array.prototype.forEach.call(form.querySelectorAll('[data-cond-width]'), function (el) {
@@ -268,7 +268,7 @@
 	form.addEventListener('input', syncCondFields);
 	syncCondFields();
 
-	// Сворачиваемые блоки: состояние сохраняется вместе с настройками.
+	// Collapsible blocks: the state is stored together with the settings.
 	function syncUiOpen() {
 		var open = [];
 		$('.office-map-section').each(function () {
@@ -288,9 +288,9 @@
 
 	syncUiOpen();
 
-	/* ---------------------------------------------------- копировать шорткод */
+	/* ------------------------------------------------------- copy shortcode */
 
-	// Поля, которые можно переопределить через шорткод, и их значения по умолчанию.
+	// Fields that can be overridden via the shortcode, and their default values.
 	var SHORTCODE_FIELDS = [
 		{ attr: 'zoom', name: 'zoom', def: '16' },
 		{ attr: 'height', name: 'height', def: '420' },
@@ -314,8 +314,8 @@
 
 		function add(attr, val) {
 			val = String(val).replace(/"/g, '');
-			// HTML, кавычки и переводы строк нельзя надёжно передать внутри атрибута шорткода —
-			// такие значения остаются в настройках (шорткод без атрибута их подхватит).
+			// HTML, quotes and line breaks cannot be reliably passed inside a shortcode
+			// attribute — such values stay in the settings (a shortcode without the attribute picks them up).
 			if (/[<>\n\r]/.test(val)) { return; }
 			attrs.push(attr + '="' + val + '"');
 		}

@@ -1,8 +1,8 @@
 /**
- * Office Map — инициализация и обновление карт (MapLibre GL JS + OpenFreeMap).
+ * Office Map — map initialization and updates (MapLibre GL JS + OpenFreeMap).
  *
- * Конфиг каждой карты — в атрибуте data-config её контейнера.
- * window.OfficeMap.apply(el, cfg) — живое обновление (страница настроек).
+ * Each map config lives in the data-config attribute of its container.
+ * window.OfficeMap.apply(el, cfg) — live update (settings page).
  */
 (function () {
 	'use strict';
@@ -132,9 +132,9 @@
 	/* -------------------------------------------------------------- overrides */
 
 	/**
-	 * Есть ли в переопределениях что-то, влияющее на вид.
+	 * Whether the overrides contain anything that affects the look.
 	 *
-	 * @param {Object} ov Переопределения.
+	 * @param {Object} ov Overrides.
 	 * @return {boolean}
 	 */
 	function hasOverrides(ov) {
@@ -147,9 +147,9 @@
 	}
 
 	/**
-	 * Какие категории стилизации затрагивает слой.
+	 * Which styling categories a layer affects.
 	 *
-	 * @param {Object} layer Слой стиля.
+	 * @param {Object} layer Style layer.
 	 * @return {string[]}
 	 */
 	function overrideKeys(layer) {
@@ -222,10 +222,10 @@
 	}
 
 	/**
-	 * Применить ручные переопределения (цвета и видимость) поверх стиля.
+	 * Apply manual overrides (colors and visibility) on top of the style.
 	 *
-	 * @param {Object} style Стиль.
-	 * @param {Object} ov    Переопределения из конфига.
+	 * @param {Object} style Style.
+	 * @param {Object} ov    Overrides from the config.
 	 * @return {Object}
 	 */
 	function applyOverrides(style, ov) {
@@ -279,13 +279,13 @@
 	}
 
 	/**
-	 * Подписи в выбранном языке: в текстовых слоях заменяем поля вида
-	 * name / name:latin / name:nonlatin на name:<lang> с откатом на исходное
-	 * значение. Подстановка идёт рекурсивно внутри выражения, поэтому
-	 * безопасна и для простых ['get', ...], и для сложных ['format', ...].
+	 * Labels in the selected language: in text layers, replace fields like
+	 * name / name:latin / name:nonlatin with name:<lang>, falling back to the
+	 * original value. The substitution is recursive inside the expression, so
+	 * it is safe for both simple ['get', ...] and complex ['format', ...].
 	 *
-	 * @param {Object} style Стиль.
-	 * @param {string} lang  Код языка (ru, en, ...).
+	 * @param {Object} style Style.
+	 * @param {string} lang  Language code (ru, en, ...).
 	 * @return {Object}
 	 */
 	function localizeStyle(style, lang) {
@@ -330,10 +330,10 @@
 	}
 
 	/**
-	 * Текст с поддержкой HTML: переводы строк → <br>.
-	 * Содержимое уже очищено на сервере (wp_kses_post).
+	 * HTML-aware text: line breaks → <br>.
+	 * The content has already been sanitized on the server (wp_kses_post).
 	 *
-	 * @param {string} value Значение.
+	 * @param {string} value Value.
 	 * @return {string}
 	 */
 	function nl2br(value) {
@@ -427,7 +427,7 @@
 
 	function applyWidth(el, cfg) {
 		var w = cfg.width || { preset: 'block' };
-		// В режиме предпросмотра «на весь экран» не применяем (обрезка по контейнеру).
+		// In preview mode, do not apply "full width" (it is clipped by the container).
 		var preset = (el.classList.contains('office-map--preview') && w.preset === 'full') ? 'block' : w.preset;
 
 		el.classList.toggle('office-map--full', preset === 'full');

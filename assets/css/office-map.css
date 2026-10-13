@@ -1,5 +1,5 @@
 /**
- * Office Map — стили карты на фронте.
+ * Office Map — front-end map styles.
  */
 
 .office-map {
@@ -14,7 +14,7 @@
 	border-radius: 8px;
 }
 
-/* Полноширинный (во всю ширину окна) режим */
+/* Full-width mode (spanning the window) */
 .office-map--full {
 	border-radius: 0;
 }
@@ -23,7 +23,7 @@
 	border-radius: 0;
 }
 
-/* Подсказка у метки */
+/* Marker popup */
 .office-map__popup {
 	font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 	color: #222;
@@ -51,7 +51,7 @@
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Своя картинка-маркер */
+/* Custom marker image */
 .office-map__marker {
 	height: 44px;
 	width: auto;
@@ -59,7 +59,7 @@
 	filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
 }
 
-/* Заглушка, если карта не загрузилась */
+/* Fallback if the map failed to load */
 .office-map__fallback {
 	padding: 16px;
 	font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -70,7 +70,7 @@
 	color: #1a73e8;
 }
 
-/* Поиск адреса на карте (поле и кнопка в одну строку) */
+/* Address search on the map (field and button on one line) */
 .office-map-search {
 	position: relative;
 	width: 280px;

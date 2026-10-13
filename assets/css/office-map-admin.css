@@ -1,5 +1,5 @@
 /**
- * Office Map — стили страницы настроек.
+ * Office Map — settings page styles.
  */
 
 .office-map-wrap__cols {
@@ -19,7 +19,7 @@
 	min-width: 320px;
 }
 
-/* Поле выбора маркера */
+/* Marker image field */
 .office-map-image-field .office-map-marker-preview {
 	margin: 6px 0;
 }
@@ -38,7 +38,7 @@
 	border-radius: 4px;
 }
 
-/* Поиск адреса */
+/* Address search */
 .office-map-searchbox {
 	position: relative;
 	margin: 6px 0;
@@ -85,7 +85,7 @@
 	color: #777;
 }
 
-/* Повторитель дополнительных меток */
+/* Additional markers repeater */
 .office-map-points {
 	margin-bottom: 8px;
 }
@@ -159,7 +159,7 @@
 	border-color: #b32d2e;
 }
 
-/* Компактная сетка полей */
+/* Compact grid of fields */
 .office-map-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -185,17 +185,17 @@
 	max-width: 360px;
 }
 
-/* Одиночное поле в ряду не растягиваем на всю ширину… */
+/* A single field in a row is not stretched to the full width… */
 .office-map-grid__item:only-child:not(.office-map-grid__item--full) {
 	max-width: 380px;
 }
 
-/* …кроме поиска адреса и списка меток. */
+/* …except the address search and the markers list. */
 .office-map-grid__item--full {
 	max-width: none;
 }
 
-/* Текстовая область (адрес с HTML) */
+/* Textarea (HTML address) */
 .office-map-textarea {
 	width: 100%;
 	max-width: 640px;
@@ -214,7 +214,7 @@
 	max-width: 620px;
 }
 
-/* Стилизация карты — таблица слоёв */
+/* Map styling — layers table */
 .office-map-subhead {
 	margin: 14px 0 4px;
 	font-size: 13px;
@@ -281,7 +281,7 @@
 	color: #c3c4c7;
 }
 
-/* Кнопка «Сохранить» в каждом блоке */
+/* "Save" button in each block */
 .office-map-section__actions {
 	margin: 12px 0 2px;
 	padding-top: 10px;
@@ -297,7 +297,7 @@
 	color: #00a32a;
 }
 
-/* Сворачиваемые секции */
+/* Collapsible sections */
 .office-map-section {
 	background: #fff;
 	border: 1px solid #dcdcde;
