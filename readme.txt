@@ -50,11 +50,11 @@ You can override individual options:
 
 This plugin relies on the following third-party services. Nothing is sent to them unless a feature that needs them is used.
 
-* **OpenFreeMap** (`tiles.openfreemap.org`) — vector map tiles and styles, built on OpenStreetMap data. Loaded whenever a map is displayed.
-* **Nominatim** (`nominatim.openstreetmap.org`) — OpenStreetMap geocoding. Used **only** when the on-map search is enabled (off by default) or when you use the address search on the settings page.
-* **Photon** (`photon.komoot.io`) — a fallback geocoder by Komoot, used only if Nominatim returns no result.
+* **OpenFreeMap** (`tiles.openfreemap.org`) — vector map tiles and styles, built on OpenStreetMap data. Loaded whenever a map is displayed. See <https://openfreemap.org/>.
+* **Nominatim** (`nominatim.openstreetmap.org`) — OpenStreetMap geocoding. Used **only** when the on-map search is enabled (off by default) or when you use the address search on the settings page. See the usage policy: <https://operations.osmfoundation.org/policies/nominatim/>.
+* **Photon** (`photon.komoot.io`) — a fallback geocoder by Komoot, used only if Nominatim returns no result. See <https://photon.komoot.io/>.
 
-Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors.
+Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, available under the ODbL. The map attribution is required by that license and must not be removed.
 
 = Privacy =
 
@@ -90,6 +90,12 @@ Yes. The search is off by default; the map works fully without it, and no reques
 = Where do the map tiles come from? =
 
 From OpenFreeMap, which serves OpenStreetMap-based vector tiles. No OpenStreetMap editing or hosting account is required.
+
+== Source code ==
+
+All source is shipped with the plugin: the PHP, JavaScript and CSS are readable and unminified, and no build step is required to run it. The bundled MapLibre GL JS library keeps its own 3-Clause BSD license and attribution in `assets/vendor/maplibre-gl/`.
+
+Development happens at <https://github.com/pro-d-e-v/Office_map>.
 
 == Screenshots ==
 
