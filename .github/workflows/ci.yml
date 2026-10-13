@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  php:
+    name: PHP lint and coding standards
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          tools: composer, cs2pr
+
+      - name: Lint PHP files
+        run: find . -name '*.php' -not -path './assets/vendor/*' -print0 | xargs -0 -n1 -P4 php -l
+
+      - name: Install PHPCS and WPCS
+        run: |
+          composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+          composer global require --dev \
+            squizlabs/php_codesniffer:^3.10 \
+            wp-coding-standards/wpcs:^3.1 \
+            dealerdirect/phpcodesniffer-composer-installer:^1.0 \
+            phpcsstandards/phpcsutils:^1.0 \
+            phpcsstandards/phpcsextra:^1.2
+
+      - name: Run PHPCS (WordPress standard)
+        run: ~/.composer/vendor/bin/phpcs --standard=WordPress --extensions=php --ignore=*/vendor/* .

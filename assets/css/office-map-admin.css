@@ -1,0 +1,352 @@
+/**
+ * Office Map — стили страницы настроек.
+ */
+
+.office-map-wrap__cols {
+	display: flex;
+	gap: 32px;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.office-map-form {
+	flex: 1 1 560px;
+	min-width: 340px;
+}
+
+.office-map-side {
+	flex: 1 1 420px;
+	min-width: 320px;
+}
+
+/* Поле выбора маркера */
+.office-map-image-field .office-map-marker-preview {
+	margin: 6px 0;
+}
+
+.office-map-image-field .office-map-marker-preview:empty {
+	display: none;
+}
+
+.office-map-image-field .office-map-marker-preview img {
+	height: 44px;
+	width: auto;
+	display: inline-block;
+	padding: 4px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+/* Поиск адреса */
+.office-map-searchbox {
+	position: relative;
+	margin: 6px 0;
+}
+
+.office-map-searchbox .office-map-search-input {
+	width: 60%;
+	min-width: 200px;
+}
+
+.office-map-search-results {
+	display: none;
+	position: relative;
+	margin-top: 4px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+	max-width: 520px;
+	overflow: hidden;
+}
+
+.office-map-search-result {
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 8px 10px;
+	border: 0;
+	border-bottom: 1px solid #f0f0f0;
+	background: #fff;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 1.35;
+	color: #222;
+}
+
+.office-map-search-result:hover {
+	background: #f3f6fb;
+}
+
+.office-map-search-hint {
+	padding: 8px 10px;
+	font-size: 13px;
+	color: #777;
+}
+
+/* Повторитель дополнительных меток */
+.office-map-points {
+	margin-bottom: 8px;
+}
+
+.office-map-point {
+	padding: 12px;
+	margin-bottom: 10px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+}
+
+.office-map-point__coords {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.office-map-point__coords input {
+	width: 130px;
+}
+
+.office-map-point input[type="text"] {
+	margin-bottom: 6px;
+}
+
+.office-map-point-address {
+	margin-bottom: 8px;
+}
+
+.office-map-point__appearance {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	padding: 8px 10px;
+	margin: 2px 0 8px;
+	background: #f6f7f7;
+	border: 1px solid #e5e5e5;
+	border-radius: 6px;
+}
+
+.office-map-point__icon .office-map-marker-preview {
+	margin: 4px 0;
+}
+
+.office-map-point__icon .office-map-marker-preview:empty {
+	display: none;
+}
+
+.office-map-point__color .wp-picker-container {
+	display: inline-block;
+}
+
+.office-map-point-title,
+.office-map-point-address {
+	display: block;
+	width: 100%;
+	max-width: 520px;
+}
+
+.office-map-point-remove {
+	margin-top: 4px;
+	color: #b32d2e;
+	border-color: #b32d2e;
+}
+
+.office-map-point-remove:hover {
+	color: #fff;
+	background: #b32d2e;
+	border-color: #b32d2e;
+}
+
+/* Компактная сетка полей */
+.office-map-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 4px 16px;
+	margin-bottom: 10px;
+}
+
+.office-map-grid__item {
+	min-width: 0;
+}
+
+.office-map-grid__item > label,
+.office-map-grid__label {
+	display: block;
+	font-weight: 600;
+	color: #1d2327;
+	margin: 6px 0 3px;
+}
+
+.office-map-grid__item input[type="text"],
+.office-map-grid__item select {
+	width: 100%;
+	max-width: 360px;
+}
+
+/* Одиночное поле в ряду не растягиваем на всю ширину… */
+.office-map-grid__item:only-child:not(.office-map-grid__item--full) {
+	max-width: 380px;
+}
+
+/* …кроме поиска адреса и списка меток. */
+.office-map-grid__item--full {
+	max-width: none;
+}
+
+/* Текстовая область (адрес с HTML) */
+.office-map-textarea {
+	width: 100%;
+	max-width: 640px;
+	min-height: 72px;
+	font-family: Consolas, Monaco, "Courier New", monospace;
+	font-size: 13px;
+	line-height: 1.5;
+	resize: vertical;
+}
+
+.office-map-grid__item--full .office-map-searchbox {
+	max-width: 620px;
+}
+
+.office-map-grid__item--full .office-map-points {
+	max-width: 620px;
+}
+
+/* Стилизация карты — таблица слоёв */
+.office-map-subhead {
+	margin: 14px 0 4px;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: #646970;
+}
+
+.office-map-styles {
+	margin: 4px 0 8px;
+}
+
+.office-map-styles__table {
+	width: 100%;
+	max-width: 720px;
+	border-collapse: collapse;
+}
+
+.office-map-styles__table th,
+.office-map-styles__table td {
+	text-align: left;
+	padding: 5px 8px;
+	border-bottom: 1px solid #f0f0f0;
+	vertical-align: middle;
+}
+
+.office-map-styles__table thead th {
+	font-size: 12px;
+	color: #646970;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.office-map-styles__name {
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.office-map-styles__table .small-text {
+	width: 64px;
+}
+
+.office-map-styles__table .wp-picker-container {
+	display: inline-block;
+}
+
+.office-map-opacity {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.office-map-opacity-range {
+	width: 110px;
+	max-width: 100%;
+	margin: 0;
+}
+
+.office-map-styles__table tr.is-off td:nth-child(3),
+.office-map-styles__table tr.is-off td:nth-child(4) {
+	opacity: 0.5;
+}
+
+.office-map-styles__na {
+	color: #c3c4c7;
+}
+
+/* Кнопка «Сохранить» в каждом блоке */
+.office-map-section__actions {
+	margin: 12px 0 2px;
+	padding-top: 10px;
+	border-top: 1px solid #f0f0f0;
+}
+
+.office-map-save.is-dirty {
+	box-shadow: 0 0 0 2px rgba(34, 113, 177, 0.35);
+}
+
+.office-map-save.is-saved {
+	border-color: #00a32a;
+	color: #00a32a;
+}
+
+/* Сворачиваемые секции */
+.office-map-section {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	margin-bottom: 14px;
+}
+
+.office-map-section__toggle {
+	margin: 0;
+}
+
+.office-map-section__toggle button {
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 10px 14px;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 600;
+	color: #1d2327;
+	border-radius: 6px;
+}
+
+.office-map-section__toggle button:hover {
+	background: #f6f7f7;
+}
+
+.office-map-section__caret {
+	display: inline-block;
+	width: 14px;
+	font-size: 11px;
+	transition: transform 0.15s ease;
+}
+
+.office-map-section.is-collapsed .office-map-section__caret {
+	transform: rotate(-90deg);
+}
+
+.office-map-section__body {
+	padding: 2px 14px 12px;
+}
+
+.office-map-section.is-collapsed .office-map-section__body {
+	display: none;
+}
+
+#office-map-copy-shortcode.is-copied {
+	border-color: #00a32a;
+	color: #00a32a;
+}

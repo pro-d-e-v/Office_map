@@ -1,0 +1,21 @@
+# Node
+node_modules/
+
+# Composer
+/vendor/
+composer.lock
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+
+# Build artifacts
+*.zip
+
+# WordPress.org SVN checkout (if used locally)
+/wordpress-org/

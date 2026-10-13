@@ -1,0 +1,11 @@
+# Files and folders excluded from the WordPress.org distribution (and releases).
+/.git
+/.github
+/.gitignore
+/.distignore
+/README.md
+/CHANGELOG.md
+/node_modules
+/.wordpress-org
+*.log
+.DS_Store
