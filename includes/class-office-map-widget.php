@@ -1,6 +1,6 @@
 <?php
 /**
- * The "Office Map" widget.
+ * The "Prodev17 Location Map" widget.
  *
  * @package Office_Map
  */
@@ -20,9 +20,9 @@ class Office_Map_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'office_map_widget',
-			__( 'Office Map', 'office-map' ),
+			__( 'Prodev17 Location Map', 'prodev17-location-map' ),
 			array(
-				'description'                 => __( 'An office map (MapLibre + OpenStreetMap) without Google or Yandex.', 'office-map' ),
+				'description'                 => __( 'An office map (MapLibre + OpenStreetMap) without Google or Yandex.', 'prodev17-location-map' ),
 				'customize_selective_refresh' => true,
 			)
 		);
@@ -67,12 +67,12 @@ class Office_Map_Widget extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		$fields = array(
-			'title'   => array( __( 'Title', 'office-map' ), '' ),
-			'lat'     => array( __( 'Latitude (lat)', 'office-map' ), '' ),
-			'lng'     => array( __( 'Longitude (lng)', 'office-map' ), '' ),
-			'zoom'    => array( __( 'Zoom', 'office-map' ), '16' ),
-			'height'  => array( __( 'Height, px', 'office-map' ), '320' ),
-			'palette' => array( __( 'Palette', 'office-map' ), '' ),
+			'title'   => array( __( 'Title', 'prodev17-location-map' ), '' ),
+			'lat'     => array( __( 'Latitude (lat)', 'prodev17-location-map' ), '' ),
+			'lng'     => array( __( 'Longitude (lng)', 'prodev17-location-map' ), '' ),
+			'zoom'    => array( __( 'Zoom', 'prodev17-location-map' ), '16' ),
+			'height'  => array( __( 'Height, px', 'prodev17-location-map' ), '320' ),
+			'palette' => array( __( 'Palette', 'prodev17-location-map' ), '' ),
 		);
 
 		foreach ( $fields as $key => $meta ) {
@@ -85,7 +85,7 @@ class Office_Map_Widget extends WP_Widget {
 				esc_attr( $value )
 			);
 		}
-		echo '<p class="description">' . esc_html__( 'Empty fields use the values from the Office Map settings page.', 'office-map' ) . '</p>';
+		echo '<p class="description">' . esc_html__( 'Empty fields use the values from the Prodev17 Location Map settings page.', 'prodev17-location-map' ) . '</p>';
 	}
 
 	/**

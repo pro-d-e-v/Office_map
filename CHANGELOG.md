@@ -5,14 +5,15 @@ for the WordPress plugin directory, lives in `readme.txt`.
 
 ## [1.9.0]
 
-* English is now the source language; all user-facing strings are translatable
-  (text domain `office-map`).
+* Renamed to "Prodev17 Location Map with OpenStreetMap"; text domain is `prodev17-location-map`.
+* English is now the source language; all user-facing strings are translatable.
 * MapLibre GL JS is bundled locally (5.24.0) — no code is loaded from a third-party CDN.
 * The on-map address search is off by default and documented as an external service.
+* The address search uses OpenStreetMap Nominatim only (the Photon fallback was removed).
 * Geocoder requests use a proper User-Agent with a contact address.
 * Added `uninstall.php` to clean up options and transients on deletion.
 * Modernized plugin headers; requires WordPress 6.0 and PHP 7.4.
-* Added `languages/office-map.pot` for translators.
+* Added a `languages/*.pot` template for translators (translations are served by translate.wordpress.org).
 
 ## [1.8.0]
 

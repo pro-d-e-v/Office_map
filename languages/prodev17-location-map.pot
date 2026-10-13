@@ -1,27 +1,27 @@
-# Copyright (C) 2026 Prodevel
+# Copyright (C) 2026 prodev17
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Office Map 1.9.0\n"
+"Project-Id-Version: Prodev17 Location Map 1.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/office-map\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-13T16:40:40+08:00\n"
+"POT-Creation-Date: 2026-10-13T21:11:34+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: office-map\n"
+"X-Domain: prodev17-location-map\n"
 
 #. Plugin Name of the plugin
 #: office-map.php
-msgid "Office Map – OpenStreetMap Map Without API Key"
+msgid "Prodev17 Location Map with OpenStreetMap"
 msgstr ""
 
 #. Plugin URI of the plugin
 #: office-map.php
-msgid "https://wordpress.org/plugins/office-map/"
+msgid "https://wordpress.org/plugins/prodev17-location-map/"
 msgstr ""
 
 #. Description of the plugin
@@ -31,19 +31,19 @@ msgstr ""
 
 #. Author of the plugin
 #: office-map.php
-msgid "Prodevel"
+msgid "prodev17"
 msgstr ""
 
 #. Author URI of the plugin
 #: office-map.php
-msgid "https://wpdev.com.ru"
+msgid "https://profiles.wordpress.org/prodev17/"
 msgstr ""
 
 #: includes/class-office-map-settings.php:72
 #: includes/class-office-map-settings.php:73
 #: includes/class-office-map-settings.php:1147
 #: includes/class-office-map-widget.php:23
-msgid "Office Map"
+msgid "Prodev17 Location Map"
 msgstr ""
 
 #: includes/class-office-map-settings.php:108
@@ -315,7 +315,7 @@ msgid "Search on the map"
 msgstr ""
 
 #: includes/class-office-map-settings.php:355
-msgid "Uses the OpenStreetMap Nominatim / Photon geocoder. Off by default for privacy."
+msgid "Uses the OpenStreetMap Nominatim geocoder. Off by default for privacy."
 msgstr ""
 
 #: includes/class-office-map-settings.php:371
@@ -508,7 +508,7 @@ msgid "Shortcode — put it in a text/code block or any content area:"
 msgstr ""
 
 #: includes/class-office-map-settings.php:1232
-msgid "Widget — “Appearance → Widgets”, the “Office Map” block."
+msgid "Widget — “Appearance → Widgets”, the “Prodev17 Location Map” block."
 msgstr ""
 
 #: includes/class-office-map-settings.php:1233
@@ -524,7 +524,7 @@ msgid "Title"
 msgstr ""
 
 #: includes/class-office-map-widget.php:88
-msgid "Empty fields use the values from the Office Map settings page."
+msgid "Empty fields use the values from the Prodev17 Location Map settings page."
 msgstr ""
 
 #: includes/class-office-map.php:127

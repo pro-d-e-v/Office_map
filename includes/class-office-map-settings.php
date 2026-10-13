@@ -69,8 +69,8 @@ class Office_Map_Settings {
 	 */
 	public function add_menu() {
 		add_menu_page(
-			__( 'Office Map', 'office-map' ),
-			__( 'Office Map', 'office-map' ),
+			__( 'Prodev17 Location Map', 'prodev17-location-map' ),
+			__( 'Prodev17 Location Map', 'prodev17-location-map' ),
 			'manage_options',
 			$this->slug,
 			array( $this, 'render_page' ),
@@ -105,16 +105,16 @@ class Office_Map_Settings {
 				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 				'nonce'   => wp_create_nonce( 'office_map_preview' ),
 				'i18n'    => array(
-					'mediaTitle'        => __( 'Marker image', 'office-map' ),
-					'mediaButton'       => __( 'Use image', 'office-map' ),
-					'searchPlaceholder' => __( 'Search address…', 'office-map' ),
-					'searchButton'      => __( 'Find', 'office-map' ),
-					'searching'         => __( 'Searching…', 'office-map' ),
-					'nothingFound'      => __( 'Nothing found', 'office-map' ),
-					'searchError'       => __( 'Search error', 'office-map' ),
-					'copied'            => __( 'Copied!', 'office-map' ),
-					'defaultTitle'      => __( 'Our office', 'office-map' ),
-					'defaultAddress'    => __( 'Add the office address', 'office-map' ),
+					'mediaTitle'        => __( 'Marker image', 'prodev17-location-map' ),
+					'mediaButton'       => __( 'Use image', 'prodev17-location-map' ),
+					'searchPlaceholder' => __( 'Search address…', 'prodev17-location-map' ),
+					'searchButton'      => __( 'Find', 'prodev17-location-map' ),
+					'searching'         => __( 'Searching…', 'prodev17-location-map' ),
+					'nothingFound'      => __( 'Nothing found', 'prodev17-location-map' ),
+					'searchError'       => __( 'Search error', 'prodev17-location-map' ),
+					'copied'            => __( 'Copied!', 'prodev17-location-map' ),
+					'defaultTitle'      => __( 'Our office', 'prodev17-location-map' ),
+					'defaultAddress'    => __( 'Add the office address', 'prodev17-location-map' ),
 				),
 			)
 		);
@@ -144,215 +144,215 @@ class Office_Map_Settings {
 		}
 
 		$units = array(
-			'%'  => __( 'Percent (%)', 'office-map' ),
-			'px' => __( 'Pixels (px)', 'office-map' ),
+			'%'  => __( 'Percent (%)', 'prodev17-location-map' ),
+			'px' => __( 'Pixels (px)', 'prodev17-location-map' ),
 		);
 
 		$this->fields_cache = array(
 			// Location.
 			'search_address'  => array(
-				'label' => __( 'Search by address', 'office-map' ),
+				'label' => __( 'Search by address', 'prodev17-location-map' ),
 				'type'  => 'search',
-				'help'  => __( 'Type an address — the coordinates will be filled in automatically.', 'office-map' ),
+				'help'  => __( 'Type an address — the coordinates will be filled in automatically.', 'prodev17-location-map' ),
 			),
 			'lat'             => array(
-				'label' => __( 'Latitude (lat)', 'office-map' ),
+				'label' => __( 'Latitude (lat)', 'prodev17-location-map' ),
 				'type'  => 'number',
-				'help'  => __( 'For example 53.900600.', 'office-map' ),
+				'help'  => __( 'For example 53.900600.', 'prodev17-location-map' ),
 			),
 			'lng'             => array(
-				'label' => __( 'Longitude (lng)', 'office-map' ),
+				'label' => __( 'Longitude (lng)', 'prodev17-location-map' ),
 				'type'  => 'number',
-				'help'  => __( 'For example 27.559000.', 'office-map' ),
+				'help'  => __( 'For example 27.559000.', 'prodev17-location-map' ),
 			),
 
 			// Size and zoom.
 			'height'          => array(
-				'label' => __( 'Height, px', 'office-map' ),
+				'label' => __( 'Height, px', 'prodev17-location-map' ),
 				'type'  => 'number',
 				'help'  => '',
 			),
 			'zoom'            => array(
-				'label' => __( 'Zoom', 'office-map' ),
+				'label' => __( 'Zoom', 'prodev17-location-map' ),
 				'type'  => 'number',
-				'help'  => __( '1–20; for an office usually 15–18.', 'office-map' ),
+				'help'  => __( '1–20; for an office usually 15–18.', 'prodev17-location-map' ),
 				'cond'  => array(
 					'field' => 'zoom_mode',
 					'value' => 'manual',
 				),
 			),
 			'width_preset'    => array(
-				'label'   => __( 'Width', 'office-map' ),
+				'label'   => __( 'Width', 'prodev17-location-map' ),
 				'type'    => 'select',
 				'choices' => Office_Map::width_presets(),
 			),
 			'width_value'     => array(
-				'label' => __( 'Value', 'office-map' ),
+				'label' => __( 'Value', 'prodev17-location-map' ),
 				'type'  => 'number',
-				'help'  => __( 'For the “Custom” preset.', 'office-map' ),
+				'help'  => __( 'For the “Custom” preset.', 'prodev17-location-map' ),
 			),
 			'width_unit'      => array(
-				'label'   => __( 'Unit', 'office-map' ),
+				'label'   => __( 'Unit', 'prodev17-location-map' ),
 				'type'    => 'select',
 				'choices' => $units,
 			),
 			'zoom_mode'       => array(
-				'label'   => __( 'Zoom mode', 'office-map' ),
+				'label'   => __( 'Zoom mode', 'prodev17-location-map' ),
 				'type'    => 'select',
 				'choices' => Office_Map::zoom_modes(),
 			),
 
 			// Marker and popup.
 			'title'           => array(
-				'label' => __( 'Marker title', 'office-map' ),
+				'label' => __( 'Marker title', 'prodev17-location-map' ),
 				'type'  => 'text',
 				'help'  => '',
 			),
 			'address'         => array(
-				'label' => __( 'Address (HTML allowed)', 'office-map' ),
+				'label' => __( 'Address (HTML allowed)', 'prodev17-location-map' ),
 				'type'  => 'textarea',
-				'help'  => __( 'Allowed HTML tags: <br>, <strong>, <em>, <a href="…">, <span style="…"> and others. Line breaks are preserved.', 'office-map' ),
+				'help'  => __( 'Allowed HTML tags: <br>, <strong>, <em>, <a href="…">, <span style="…"> and others. Line breaks are preserved.', 'prodev17-location-map' ),
 			),
 			'marker_image'    => array(
-				'label' => __( 'Custom marker', 'office-map' ),
+				'label' => __( 'Custom marker', 'prodev17-location-map' ),
 				'type'  => 'image',
-				'help'  => __( 'PNG/SVG with the tip at the bottom. Used by default for all markers; each extra point can have its own icon.', 'office-map' ),
+				'help'  => __( 'PNG/SVG with the tip at the bottom. Used by default for all markers; each extra point can have its own icon.', 'prodev17-location-map' ),
 			),
 			'marker_color'    => array(
-				'label' => __( 'Default marker color', 'office-map' ),
+				'label' => __( 'Default marker color', 'prodev17-location-map' ),
 				'type'  => 'color',
-				'help'  => __( 'Applied to markers without their own color.', 'office-map' ),
+				'help'  => __( 'Applied to markers without their own color.', 'prodev17-location-map' ),
 			),
 
 			// Additional markers.
 			'points'          => array(
-				'label' => __( 'Additional markers', 'office-map' ),
+				'label' => __( 'Additional markers', 'prodev17-location-map' ),
 				'type'  => 'points',
 				'help'  => '',
 			),
 
 			// Appearance.
 			'base_style'      => array(
-				'label'   => __( 'Base style', 'office-map' ),
+				'label'   => __( 'Base style', 'prodev17-location-map' ),
 				'type'    => 'select',
 				'choices' => Office_Map::base_styles(),
 			),
 			'palette'         => array(
-				'label'   => __( 'Palette', 'office-map' ),
+				'label'   => __( 'Palette', 'prodev17-location-map' ),
 				'type'    => 'select',
 				'choices' => Office_Map::palettes(),
 			),
 			'map_lang'        => array(
-				'label'   => __( 'Map language', 'office-map' ),
+				'label'   => __( 'Map language', 'prodev17-location-map' ),
 				'type'    => 'select',
 				'choices' => Office_Map::map_languages(),
-				'help'    => __( 'Language of feature labels and geocoder responses. “Auto” keeps the labels as they are in the tiles (usually the local language).', 'office-map' ),
+				'help'    => __( 'Language of feature labels and geocoder responses. “Auto” keeps the labels as they are in the tiles (usually the local language).', 'prodev17-location-map' ),
 			),
 
 			// Map styling.
 			'style_colors'    => array(
-				'label' => __( 'Layer colors', 'office-map' ),
+				'label' => __( 'Layer colors', 'prodev17-location-map' ),
 				'type'  => 'style_colors',
-				'help'  => __( 'Enable the layers you need and set their color and opacity. Applied on top of the base style and palette.', 'office-map' ),
+				'help'  => __( 'Enable the layers you need and set their color and opacity. Applied on top of the base style and palette.', 'prodev17-location-map' ),
 			),
 			'hide_poi'        => array(
-				'label' => __( 'Hide POI (points of interest)', 'office-map' ),
+				'label' => __( 'Hide POI (points of interest)', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'hide_buildings'  => array(
-				'label' => __( 'Hide buildings (2D)', 'office-map' ),
+				'label' => __( 'Hide buildings (2D)', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'hide_3d'         => array(
-				'label' => __( 'Hide 3D buildings', 'office-map' ),
+				'label' => __( 'Hide 3D buildings', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'hide_terrain'    => array(
-				'label' => __( 'Hide terrain (raster layer)', 'office-map' ),
+				'label' => __( 'Hide terrain (raster layer)', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'hide_boundary'   => array(
-				'label' => __( 'Hide borders', 'office-map' ),
+				'label' => __( 'Hide borders', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'hide_rail'       => array(
-				'label' => __( 'Hide rail and transit', 'office-map' ),
+				'label' => __( 'Hide rail and transit', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'hide_labels'     => array(
-				'label' => __( 'Hide all labels', 'office-map' ),
+				'label' => __( 'Hide all labels', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'terrain_opacity' => array(
-				'label' => __( 'Terrain opacity, %', 'office-map' ),
+				'label' => __( 'Terrain opacity, %', 'prodev17-location-map' ),
 				'type'  => 'number',
-				'help'  => __( '0 — terrain is invisible, 100 — fully visible.', 'office-map' ),
+				'help'  => __( '0 — terrain is invisible, 100 — fully visible.', 'prodev17-location-map' ),
 			),
 
 			// On-map search styling.
 			'search_bg'       => array(
-				'label' => __( 'Search field background', 'office-map' ),
+				'label' => __( 'Search field background', 'prodev17-location-map' ),
 				'type'  => 'color',
 				'help'  => '',
 			),
 			'search_text'     => array(
-				'label' => __( 'Search field text', 'office-map' ),
+				'label' => __( 'Search field text', 'prodev17-location-map' ),
 				'type'  => 'color',
 				'help'  => '',
 			),
 			'search_border'   => array(
-				'label' => __( 'Search field border', 'office-map' ),
+				'label' => __( 'Search field border', 'prodev17-location-map' ),
 				'type'  => 'color',
 				'help'  => '',
 			),
 			'search_btn_bg'   => array(
-				'label' => __( '“Find” button — background', 'office-map' ),
+				'label' => __( '“Find” button — background', 'prodev17-location-map' ),
 				'type'  => 'color',
 				'help'  => '',
 			),
 			'search_btn_text' => array(
-				'label' => __( '“Find” button — text', 'office-map' ),
+				'label' => __( '“Find” button — text', 'prodev17-location-map' ),
 				'type'  => 'color',
 				'help'  => '',
 			),
 			'search_radius'   => array(
-				'label' => __( 'Search field corner radius, px', 'office-map' ),
+				'label' => __( 'Search field corner radius, px', 'prodev17-location-map' ),
 				'type'  => 'number',
-				'help'  => __( '0–24.', 'office-map' ),
+				'help'  => __( '0–24.', 'prodev17-location-map' ),
 			),
 
 			// Behaviour.
 			'marker'          => array(
-				'label' => __( 'Show markers', 'office-map' ),
+				'label' => __( 'Show markers', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'popup'           => array(
-				'label' => __( 'Open the popup right away', 'office-map' ),
+				'label' => __( 'Open the popup right away', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'scroll'          => array(
-				'label' => __( 'Zoom with the mouse wheel', 'office-map' ),
+				'label' => __( 'Zoom with the mouse wheel', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'fullscreen'      => array(
-				'label' => __( '“Fullscreen” button', 'office-map' ),
+				'label' => __( '“Fullscreen” button', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
 				'help'  => '',
 			),
 			'search'          => array(
-				'label' => __( 'Search on the map', 'office-map' ),
+				'label' => __( 'Search on the map', 'prodev17-location-map' ),
 				'type'  => 'checkbox',
-				'help'  => __( 'Uses the OpenStreetMap Nominatim / Photon geocoder. Off by default for privacy.', 'office-map' ),
+				'help'  => __( 'Uses the OpenStreetMap Nominatim geocoder. Off by default for privacy.', 'prodev17-location-map' ),
 			),
 		);
 
@@ -368,11 +368,11 @@ class Office_Map_Settings {
 		return array(
 			array(
 				'key'   => 'location',
-				'title' => __( 'Main address', 'office-map' ),
+				'title' => __( 'Main address', 'prodev17-location-map' ),
 				'rows'  => array(
 					array( 'search_address' ),
 					array( 'lat', 'lng' ),
-					array( 'heading' => __( 'Marker and popup', 'office-map' ) ),
+					array( 'heading' => __( 'Marker and popup', 'prodev17-location-map' ) ),
 					array( 'title', 'marker_color' ),
 					array( 'address' ),
 					array( 'marker_image' ),
@@ -380,14 +380,14 @@ class Office_Map_Settings {
 			),
 			array(
 				'key'   => 'points',
-				'title' => __( 'Additional markers', 'office-map' ),
+				'title' => __( 'Additional markers', 'prodev17-location-map' ),
 				'rows'  => array(
 					array( 'points' ),
 				),
 			),
 			array(
 				'key'   => 'size',
-				'title' => __( 'Size and zoom', 'office-map' ),
+				'title' => __( 'Size and zoom', 'prodev17-location-map' ),
 				'rows'  => array(
 					array( 'height', 'zoom' ),
 					array( 'width_preset', 'zoom_mode' ),
@@ -399,7 +399,7 @@ class Office_Map_Settings {
 			),
 			array(
 				'key'   => 'appearance',
-				'title' => __( 'Appearance', 'office-map' ),
+				'title' => __( 'Appearance', 'prodev17-location-map' ),
 				'rows'  => array(
 					array( 'base_style', 'palette' ),
 					array( 'map_lang' ),
@@ -407,15 +407,15 @@ class Office_Map_Settings {
 			),
 			array(
 				'key'   => 'styling',
-				'title' => __( 'Map styling', 'office-map' ),
+				'title' => __( 'Map styling', 'prodev17-location-map' ),
 				'rows'  => array(
 					array( 'style_colors' ),
-					array( 'heading' => __( 'Layer visibility', 'office-map' ) ),
+					array( 'heading' => __( 'Layer visibility', 'prodev17-location-map' ) ),
 					array( 'hide_poi', 'hide_buildings' ),
 					array( 'hide_3d', 'hide_terrain' ),
 					array( 'hide_boundary', 'hide_rail' ),
 					array( 'hide_labels', 'terrain_opacity' ),
-					array( 'heading' => __( 'Search on the map', 'office-map' ) ),
+					array( 'heading' => __( 'Search on the map', 'prodev17-location-map' ) ),
 					array( 'search_bg', 'search_text' ),
 					array( 'search_border', 'search_radius' ),
 					array( 'search_btn_bg', 'search_btn_text' ),
@@ -423,7 +423,7 @@ class Office_Map_Settings {
 			),
 			array(
 				'key'   => 'behaviour',
-				'title' => __( 'Behaviour', 'office-map' ),
+				'title' => __( 'Behaviour', 'prodev17-location-map' ),
 				'rows'  => array(
 					array( 'marker', 'popup' ),
 					array( 'scroll', 'fullscreen' ),
@@ -488,7 +488,7 @@ class Office_Map_Settings {
 				}
 				?>
 				<p class="office-map-section__actions">
-					<button type="submit" class="button button-primary office-map-save"><?php esc_html_e( 'Save', 'office-map' ); ?></button>
+					<button type="submit" class="button button-primary office-map-save"><?php esc_html_e( 'Save', 'prodev17-location-map' ); ?></button>
 				</p>
 			</div>
 		</div>
@@ -615,8 +615,8 @@ class Office_Map_Settings {
 					printf( '<img src="%s" alt="">', esc_url( $url ) );
 				}
 				echo '</div>';
-				printf( '<button type="button" class="button office-map-upload" data-target="#%s">%s</button> ', esc_attr( $id ), esc_html__( 'Choose image', 'office-map' ) );
-				printf( '<button type="button" class="button office-map-remove" data-target="#%s">%s</button>', esc_attr( $id ), esc_html__( 'Remove', 'office-map' ) );
+				printf( '<button type="button" class="button office-map-upload" data-target="#%s">%s</button> ', esc_attr( $id ), esc_html__( 'Choose image', 'prodev17-location-map' ) );
+				printf( '<button type="button" class="button office-map-remove" data-target="#%s">%s</button>', esc_attr( $id ), esc_html__( 'Remove', 'prodev17-location-map' ) );
 				echo '</div>';
 				break;
 
@@ -626,8 +626,8 @@ class Office_Map_Settings {
 
 			case 'search':
 				echo '<div class="office-map-searchbox" data-lat="#office_map_lat" data-lng="#office_map_lng">';
-				echo '<input type="text" class="office-map-search-input" placeholder="' . esc_attr__( 'For example: Minsk, Nezavisimosti Ave 1', 'office-map' ) . '">';
-				echo ' <button type="button" class="button office-map-search-btn">' . esc_html__( 'Find', 'office-map' ) . '</button>';
+				echo '<input type="text" class="office-map-search-input" placeholder="' . esc_attr__( 'For example: Minsk, Nezavisimosti Ave 1', 'prodev17-location-map' ) . '">';
+				echo ' <button type="button" class="button office-map-search-btn">' . esc_html__( 'Find', 'prodev17-location-map' ) . '</button>';
 				echo '<div class="office-map-search-results"></div>';
 				echo '</div>';
 				break;
@@ -677,10 +677,10 @@ class Office_Map_Settings {
 			<table class="office-map-styles__table">
 				<thead>
 					<tr>
-						<th><?php esc_html_e( 'Layer', 'office-map' ); ?></th>
-						<th><?php esc_html_e( 'On', 'office-map' ); ?></th>
-						<th><?php esc_html_e( 'Color', 'office-map' ); ?></th>
-						<th><?php esc_html_e( 'Opacity, %', 'office-map' ); ?></th>
+						<th><?php esc_html_e( 'Layer', 'prodev17-location-map' ); ?></th>
+						<th><?php esc_html_e( 'On', 'prodev17-location-map' ); ?></th>
+						<th><?php esc_html_e( 'Color', 'prodev17-location-map' ); ?></th>
+						<th><?php esc_html_e( 'Opacity, %', 'prodev17-location-map' ); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -700,7 +700,7 @@ class Office_Map_Settings {
 						<td>
 							<?php if ( ! empty( $cat['opacity'] ) ) : ?>
 								<div class="office-map-opacity">
-									<input type="range" min="0" max="100" step="1" class="office-map-opacity-range" value="<?php echo esc_attr( $op ); ?>" aria-label="<?php esc_attr_e( 'Opacity', 'office-map' ); ?>">
+									<input type="range" min="0" max="100" step="1" class="office-map-opacity-range" value="<?php echo esc_attr( $op ); ?>" aria-label="<?php esc_attr_e( 'Opacity', 'prodev17-location-map' ); ?>">
 									<input type="text" inputmode="numeric" class="small-text office-map-opacity-num" name="<?php echo esc_attr( $base ); ?>[opacity]" value="<?php echo esc_attr( $op ); ?>">
 								</div>
 							<?php else : ?>
@@ -711,7 +711,7 @@ class Office_Map_Settings {
 				<?php endforeach; ?>
 				</tbody>
 			</table>
-			<p class="description"><?php esc_html_e( 'Tick “On” for a layer to apply its color. Changing a color or opacity turns the layer on automatically. Changes take effect after you press “Save” at the bottom of the block.', 'office-map' ); ?></p>
+			<p class="description"><?php esc_html_e( 'Tick “On” for a layer to apply its color. Changing a color or opacity turns the layer on automatically. Changes take effect after you press “Save” at the bottom of the block.', 'prodev17-location-map' ); ?></p>
 		</div>
 		<?php
 	}
@@ -731,7 +731,7 @@ class Office_Map_Settings {
 		}
 		echo '</div>';
 
-		echo '<p><button type="button" class="button button-secondary" id="office-map-add-point">' . esc_html__( '+ Add marker', 'office-map' ) . '</button></p>';
+		echo '<p><button type="button" class="button button-secondary" id="office-map-add-point">' . esc_html__( '+ Add marker', 'prodev17-location-map' ) . '</button></p>';
 
 		echo '<div class="office-map-point-template" style="display:none">';
 		$this->render_point_row( '__i__', array() );
@@ -758,37 +758,37 @@ class Office_Map_Settings {
 		?>
 		<div class="office-map-point">
 			<div class="office-map-point__coords">
-				<input type="text" class="office-map-point-lat code" name="<?php echo esc_attr( $base ); ?>[lat]" value="<?php echo esc_attr( $lat ); ?>" placeholder="<?php esc_attr_e( 'Latitude', 'office-map' ); ?>" inputmode="decimal">
-				<input type="text" class="office-map-point-lng code" name="<?php echo esc_attr( $base ); ?>[lng]" value="<?php echo esc_attr( $lng ); ?>" placeholder="<?php esc_attr_e( 'Longitude', 'office-map' ); ?>" inputmode="decimal">
+				<input type="text" class="office-map-point-lat code" name="<?php echo esc_attr( $base ); ?>[lat]" value="<?php echo esc_attr( $lat ); ?>" placeholder="<?php esc_attr_e( 'Latitude', 'prodev17-location-map' ); ?>" inputmode="decimal">
+				<input type="text" class="office-map-point-lng code" name="<?php echo esc_attr( $base ); ?>[lng]" value="<?php echo esc_attr( $lng ); ?>" placeholder="<?php esc_attr_e( 'Longitude', 'prodev17-location-map' ); ?>" inputmode="decimal">
 			</div>
 			<div class="office-map-searchbox">
-				<input type="text" class="office-map-search-input" placeholder="<?php esc_attr_e( 'Search by address…', 'office-map' ); ?>">
-				<button type="button" class="button office-map-search-btn"><?php esc_html_e( 'Find', 'office-map' ); ?></button>
+				<input type="text" class="office-map-search-input" placeholder="<?php esc_attr_e( 'Search by address…', 'prodev17-location-map' ); ?>">
+				<button type="button" class="button office-map-search-btn"><?php esc_html_e( 'Find', 'prodev17-location-map' ); ?></button>
 				<div class="office-map-search-results"></div>
 			</div>
-			<input type="text" class="office-map-point-title" name="<?php echo esc_attr( $base ); ?>[title]" value="<?php echo esc_attr( $title ); ?>" placeholder="<?php esc_attr_e( 'Marker title', 'office-map' ); ?>">
-			<textarea class="office-map-point-address office-map-textarea" rows="2" name="<?php echo esc_attr( $base ); ?>[address]" placeholder="<?php esc_attr_e( 'Address in the popup (HTML allowed)', 'office-map' ); ?>"><?php echo esc_textarea( $address ); ?></textarea>
+			<input type="text" class="office-map-point-title" name="<?php echo esc_attr( $base ); ?>[title]" value="<?php echo esc_attr( $title ); ?>" placeholder="<?php esc_attr_e( 'Marker title', 'prodev17-location-map' ); ?>">
+			<textarea class="office-map-point-address office-map-textarea" rows="2" name="<?php echo esc_attr( $base ); ?>[address]" placeholder="<?php esc_attr_e( 'Address in the popup (HTML allowed)', 'prodev17-location-map' ); ?>"><?php echo esc_textarea( $address ); ?></textarea>
 
 			<div class="office-map-point__appearance">
 				<div class="office-map-image-field office-map-point__icon">
-					<div class="office-map-grid__label"><?php esc_html_e( 'Custom icon (optional)', 'office-map' ); ?></div>
+					<div class="office-map-grid__label"><?php esc_html_e( 'Custom icon (optional)', 'prodev17-location-map' ); ?></div>
 					<input type="hidden" class="office-map-image-input" id="<?php echo esc_attr( $pid ); ?>_image" name="<?php echo esc_attr( $base ); ?>[image]" value="<?php echo esc_attr( $image ); ?>">
 					<div class="office-map-marker-preview">
 						<?php if ( $img_url ) : ?>
 							<img src="<?php echo esc_url( $img_url ); ?>" alt="">
 						<?php endif; ?>
 					</div>
-					<button type="button" class="button office-map-upload" data-target="#<?php echo esc_attr( $pid ); ?>_image"><?php esc_html_e( 'Choose icon', 'office-map' ); ?></button>
-					<button type="button" class="button office-map-remove" data-target="#<?php echo esc_attr( $pid ); ?>_image"><?php esc_html_e( 'Remove', 'office-map' ); ?></button>
+					<button type="button" class="button office-map-upload" data-target="#<?php echo esc_attr( $pid ); ?>_image"><?php esc_html_e( 'Choose icon', 'prodev17-location-map' ); ?></button>
+					<button type="button" class="button office-map-remove" data-target="#<?php echo esc_attr( $pid ); ?>_image"><?php esc_html_e( 'Remove', 'prodev17-location-map' ); ?></button>
 				</div>
 
 				<div class="office-map-point__color">
-					<label class="office-map-grid__label" for="<?php echo esc_attr( $pid ); ?>_color"><?php esc_html_e( 'Marker color', 'office-map' ); ?></label>
-					<input type="text" class="office-map-color" id="<?php echo esc_attr( $pid ); ?>_color" name="<?php echo esc_attr( $base ); ?>[color]" value="<?php echo esc_attr( $color ); ?>" data-default-color="#e63946" placeholder="<?php esc_attr_e( 'default', 'office-map' ); ?>">
+					<label class="office-map-grid__label" for="<?php echo esc_attr( $pid ); ?>_color"><?php esc_html_e( 'Marker color', 'prodev17-location-map' ); ?></label>
+					<input type="text" class="office-map-color" id="<?php echo esc_attr( $pid ); ?>_color" name="<?php echo esc_attr( $base ); ?>[color]" value="<?php echo esc_attr( $color ); ?>" data-default-color="#e63946" placeholder="<?php esc_attr_e( 'default', 'prodev17-location-map' ); ?>">
 				</div>
 			</div>
 
-			<button type="button" class="button office-map-point-remove"><?php esc_html_e( 'Delete', 'office-map' ); ?></button>
+			<button type="button" class="button office-map-point-remove"><?php esc_html_e( 'Delete', 'prodev17-location-map' ); ?></button>
 		</div>
 		<?php
 	}
@@ -1144,7 +1144,7 @@ class Office_Map_Settings {
 		}
 		?>
 		<div class="wrap office-map-wrap">
-			<h1><?php esc_html_e( 'Office Map', 'office-map' ); ?></h1>
+			<h1><?php esc_html_e( 'Prodev17 Location Map', 'prodev17-location-map' ); ?></h1>
 			<?php
 			// Read-only status flags shown after a redirect.
 			$om_imported = isset( $_GET['office_map_imported'] ) ? sanitize_text_field( wp_unslash( $_GET['office_map_imported'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only status flag.
@@ -1154,17 +1154,17 @@ class Office_Map_Settings {
 				<div class="notice notice-<?php echo '1' === $om_imported ? 'success' : 'error'; ?> is-dismissible"><p>
 					<?php
 					if ( '1' === $om_imported ) {
-						esc_html_e( 'Settings imported.', 'office-map' );
+						esc_html_e( 'Settings imported.', 'prodev17-location-map' );
 					} else {
-						esc_html_e( 'Could not import: invalid JSON.', 'office-map' );
+						esc_html_e( 'Could not import: invalid JSON.', 'prodev17-location-map' );
 					}
 					?>
 				</p></div>
 			<?php endif; ?>
 			<?php if ( $om_restored ) : ?>
-				<div class="notice notice-success is-dismissible"><p><?php esc_html_e( 'Previous settings restored.', 'office-map' ); ?></p></div>
+				<div class="notice notice-success is-dismissible"><p><?php esc_html_e( 'Previous settings restored.', 'prodev17-location-map' ); ?></p></div>
 			<?php endif; ?>
-			<p><?php esc_html_e( 'A map on MapLibre GL JS and OpenStreetMap: no Google, no Yandex, no API keys and no ads.', 'office-map' ); ?></p>
+			<p><?php esc_html_e( 'A map on MapLibre GL JS and OpenStreetMap: no Google, no Yandex, no API keys and no ads.', 'prodev17-location-map' ); ?></p>
 
 			<div class="office-map-wrap__cols">
 				<form action="options.php" method="post" class="office-map-form">
@@ -1177,24 +1177,24 @@ class Office_Map_Settings {
 					foreach ( $this->sections() as $section ) {
 						$this->render_section( $section );
 					}
-					submit_button( __( 'Save changes', 'office-map' ) );
+					submit_button( __( 'Save changes', 'prodev17-location-map' ) );
 					?>
 				</form>
 
 				<div class="office-map-side">
-					<h2><?php esc_html_e( 'Preview', 'office-map' ); ?></h2>
-					<p class="description"><?php esc_html_e( 'Updates after you press “Save” in any block.', 'office-map' ); ?></p>
+					<h2><?php esc_html_e( 'Preview', 'prodev17-location-map' ); ?></h2>
+					<p class="description"><?php esc_html_e( 'Updates after you press “Save” in any block.', 'prodev17-location-map' ); ?></p>
 					<?php echo do_shortcode( '[office_map preview="yes"]' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped by the shortcode. ?>
 
 					<p>
-						<button type="button" class="button" id="office-map-copy-shortcode"><?php esc_html_e( 'Copy shortcode with current settings', 'office-map' ); ?></button>
+						<button type="button" class="button" id="office-map-copy-shortcode"><?php esc_html_e( 'Copy shortcode with current settings', 'prodev17-location-map' ); ?></button>
 					</p>
 
 					<?php if ( get_option( 'office_map_options_backup', array() ) ) : ?>
-					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" onsubmit="return confirm( '<?php echo esc_js( __( 'Restore the previous saved settings?', 'office-map' ) ); ?>' );">
+					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" onsubmit="return confirm( '<?php echo esc_js( __( 'Restore the previous saved settings?', 'prodev17-location-map' ) ); ?>' );">
 						<input type="hidden" name="action" value="office_map_restore">
 						<?php wp_nonce_field( 'office_map_restore' ); ?>
-						<button type="submit" class="button"><?php esc_html_e( 'Roll back the previous settings', 'office-map' ); ?></button>
+						<button type="submit" class="button"><?php esc_html_e( 'Roll back the previous settings', 'prodev17-location-map' ); ?></button>
 					</form>
 					<?php endif; ?>
 
@@ -1203,34 +1203,34 @@ class Office_Map_Settings {
 					$om_cur  = Office_Map::get_options();
 					if ( empty( $om_cur['points'] ) && is_array( $om_good ) && ! empty( $om_good['points'] ) ) :
 						?>
-					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" onsubmit="return confirm( '<?php echo esc_js( __( 'Restore the markers from the last version that had them?', 'office-map' ) ); ?>' );">
+					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" onsubmit="return confirm( '<?php echo esc_js( __( 'Restore the markers from the last version that had them?', 'prodev17-location-map' ) ); ?>' );">
 						<input type="hidden" name="action" value="office_map_restore_lastgood">
 						<?php wp_nonce_field( 'office_map_restore_lastgood' ); ?>
-						<button type="submit" class="button"><?php esc_html_e( 'Restore markers', 'office-map' ); ?></button>
+						<button type="submit" class="button"><?php esc_html_e( 'Restore markers', 'prodev17-location-map' ); ?></button>
 					</form>
 					<?php endif; ?>
 
-					<h2><?php esc_html_e( 'Import / export settings', 'office-map' ); ?></h2>
-					<p class="description"><?php esc_html_e( 'Export is a JSON file with all settings that you can import on another site (address, markers, colors, styling).', 'office-map' ); ?></p>
+					<h2><?php esc_html_e( 'Import / export settings', 'prodev17-location-map' ); ?></h2>
+					<p class="description"><?php esc_html_e( 'Export is a JSON file with all settings that you can import on another site (address, markers, colors, styling).', 'prodev17-location-map' ); ?></p>
 					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" style="margin-bottom:10px">
 						<input type="hidden" name="action" value="office_map_export">
 						<?php wp_nonce_field( 'office_map_export' ); ?>
-						<button type="submit" class="button"><?php esc_html_e( 'Download settings (JSON)', 'office-map' ); ?></button>
+						<button type="submit" class="button"><?php esc_html_e( 'Download settings (JSON)', 'prodev17-location-map' ); ?></button>
 					</form>
 
-					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" enctype="multipart/form-data" onsubmit="return confirm( '<?php echo esc_js( __( 'Import settings? The current settings will be overwritten (you can roll back).', 'office-map' ) ); ?>' );">
+					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" enctype="multipart/form-data" onsubmit="return confirm( '<?php echo esc_js( __( 'Import settings? The current settings will be overwritten (you can roll back).', 'prodev17-location-map' ) ); ?>' );">
 						<input type="hidden" name="action" value="office_map_import">
 						<?php wp_nonce_field( 'office_map_import' ); ?>
 						<p><input type="file" name="office_map_file" accept=".json,application/json"></p>
-						<p><textarea name="office_map_json" rows="4" class="large-text code" placeholder="<?php esc_attr_e( '…or paste the JSON content here', 'office-map' ); ?>"></textarea></p>
-						<button type="submit" class="button button-primary"><?php esc_html_e( 'Import', 'office-map' ); ?></button>
+						<p><textarea name="office_map_json" rows="4" class="large-text code" placeholder="<?php esc_attr_e( '…or paste the JSON content here', 'prodev17-location-map' ); ?>"></textarea></p>
+						<button type="submit" class="button button-primary"><?php esc_html_e( 'Import', 'prodev17-location-map' ); ?></button>
 					</form>
 
-					<h2><?php esc_html_e( 'How to place the map', 'office-map' ); ?></h2>
-					<p><?php esc_html_e( 'Shortcode — put it in a text/code block or any content area:', 'office-map' ); ?></p>
+					<h2><?php esc_html_e( 'How to place the map', 'prodev17-location-map' ); ?></h2>
+					<p><?php esc_html_e( 'Shortcode — put it in a text/code block or any content area:', 'prodev17-location-map' ); ?></p>
 					<p><code>[office_map]</code></p>
-					<p><?php esc_html_e( 'Widget — “Appearance → Widgets”, the “Office Map” block.', 'office-map' ); ?></p>
-					<p><?php esc_html_e( 'Moving to another site: copy the wp-content/plugins/office-map/ folder and activate the plugin.', 'office-map' ); ?></p>
+					<p><?php esc_html_e( 'Widget — “Appearance → Widgets”, the “Prodev17 Location Map” block.', 'prodev17-location-map' ); ?></p>
+					<p><?php esc_html_e( 'Moving to another site: copy the wp-content/plugins/office-map/ folder and activate the plugin.', 'prodev17-location-map' ); ?></p>
 				</div>
 			</div>
 		</div>

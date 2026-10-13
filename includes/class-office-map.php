@@ -71,8 +71,8 @@ class Office_Map {
 			'width_preset'    => 'block',
 			'width_value'     => '100',
 			'width_unit'      => '%',
-			'title'           => __( 'Our office', 'office-map' ),
-			'address'         => __( 'Add the office address', 'office-map' ),
+			'title'           => __( 'Our office', 'prodev17-location-map' ),
+			'address'         => __( 'Add the office address', 'prodev17-location-map' ),
 			'base_style'      => 'liberty',
 			'palette'         => 'original',
 			'zoom_mode'       => 'manual',
@@ -124,11 +124,11 @@ class Office_Map {
 	 */
 	public static function base_styles() {
 		return array(
-			'liberty'  => __( 'Liberty (default, detailed)', 'office-map' ),
-			'bright'   => __( 'Bright (vivid, detailed)', 'office-map' ),
-			'positron' => __( 'Positron (light, minimal)', 'office-map' ),
-			'dark'     => __( 'Dark (dark)', 'office-map' ),
-			'fiord'    => __( 'Fiord (cool, muted)', 'office-map' ),
+			'liberty'  => __( 'Liberty (default, detailed)', 'prodev17-location-map' ),
+			'bright'   => __( 'Bright (vivid, detailed)', 'prodev17-location-map' ),
+			'positron' => __( 'Positron (light, minimal)', 'prodev17-location-map' ),
+			'dark'     => __( 'Dark (dark)', 'prodev17-location-map' ),
+			'fiord'    => __( 'Fiord (cool, muted)', 'prodev17-location-map' ),
 		);
 	}
 
@@ -139,9 +139,9 @@ class Office_Map {
 	 */
 	public static function palettes() {
 		return array(
-			'original' => __( 'Original (as in OpenFreeMap)', 'office-map' ),
-			'google'   => __( 'Bright and detailed', 'office-map' ),
-			'yandex'   => __( 'Warm and muted', 'office-map' ),
+			'original' => __( 'Original (as in OpenFreeMap)', 'prodev17-location-map' ),
+			'google'   => __( 'Bright and detailed', 'prodev17-location-map' ),
+			'yandex'   => __( 'Warm and muted', 'prodev17-location-map' ),
 		);
 	}
 
@@ -152,9 +152,9 @@ class Office_Map {
 	 */
 	public static function width_presets() {
 		return array(
-			'block'  => __( 'Block (container width)', 'office-map' ),
-			'full'   => __( 'Full width (window width)', 'office-map' ),
-			'custom' => __( 'Custom (value and unit)', 'office-map' ),
+			'block'  => __( 'Block (container width)', 'prodev17-location-map' ),
+			'full'   => __( 'Full width (window width)', 'prodev17-location-map' ),
+			'custom' => __( 'Custom (value and unit)', 'prodev17-location-map' ),
 		);
 	}
 
@@ -165,8 +165,8 @@ class Office_Map {
 	 */
 	public static function zoom_modes() {
 		return array(
-			'manual' => __( 'Fixed zoom', 'office-map' ),
-			'fit'    => __( 'Fit all markers (auto)', 'office-map' ),
+			'manual' => __( 'Fixed zoom', 'prodev17-location-map' ),
+			'fit'    => __( 'Fit all markers (auto)', 'prodev17-location-map' ),
 		);
 	}
 
@@ -182,87 +182,87 @@ class Office_Map {
 	public static function style_categories() {
 		return array(
 			'land'           => array(
-				'label'   => __( 'Map background / land', 'office-map' ),
+				'label'   => __( 'Map background / land', 'prodev17-location-map' ),
 				'color'   => '#f5f5f5',
 				'opacity' => true,
 			),
 			'water'          => array(
-				'label'   => __( 'Water', 'office-map' ),
+				'label'   => __( 'Water', 'prodev17-location-map' ),
 				'color'   => '#aadaff',
 				'opacity' => true,
 			),
 			'waterway'       => array(
-				'label'   => __( 'Rivers and canals', 'office-map' ),
+				'label'   => __( 'Rivers and canals', 'prodev17-location-map' ),
 				'color'   => '#a5d5f7',
 				'opacity' => true,
 			),
 			'park'           => array(
-				'label'   => __( 'Parks and greenery', 'office-map' ),
+				'label'   => __( 'Parks and greenery', 'prodev17-location-map' ),
 				'color'   => '#c9f0c4',
 				'opacity' => true,
 			),
 			'forest'         => array(
-				'label'   => __( 'Forest', 'office-map' ),
+				'label'   => __( 'Forest', 'prodev17-location-map' ),
 				'color'   => '#b4e6a8',
 				'opacity' => true,
 			),
 			'sand'           => array(
-				'label'   => __( 'Sand and beaches', 'office-map' ),
+				'label'   => __( 'Sand and beaches', 'prodev17-location-map' ),
 				'color'   => '#f2e9c9',
 				'opacity' => true,
 			),
 			'ice'            => array(
-				'label'   => __( 'Ice and glaciers', 'office-map' ),
+				'label'   => __( 'Ice and glaciers', 'prodev17-location-map' ),
 				'color'   => '#ffffff',
 				'opacity' => true,
 			),
 			'building'       => array(
-				'label'   => __( 'Buildings (2D)', 'office-map' ),
+				'label'   => __( 'Buildings (2D)', 'prodev17-location-map' ),
 				'color'   => '#e4e4e4',
 				'opacity' => true,
 			),
 			'road'           => array(
-				'label'   => __( 'Roads', 'office-map' ),
+				'label'   => __( 'Roads', 'prodev17-location-map' ),
 				'color'   => '#ffffff',
 				'opacity' => true,
 			),
 			'road_casing'    => array(
-				'label'   => __( 'Road casing', 'office-map' ),
+				'label'   => __( 'Road casing', 'prodev17-location-map' ),
 				'color'   => '#d9d9d9',
 				'opacity' => true,
 			),
 			'highway'        => array(
-				'label'   => __( 'Highways', 'office-map' ),
+				'label'   => __( 'Highways', 'prodev17-location-map' ),
 				'color'   => '#ffd166',
 				'opacity' => true,
 			),
 			'highway_casing' => array(
-				'label'   => __( 'Highway casing', 'office-map' ),
+				'label'   => __( 'Highway casing', 'prodev17-location-map' ),
 				'color'   => '#e6b84a',
 				'opacity' => true,
 			),
 			'rail'           => array(
-				'label'   => __( 'Rail and transit', 'office-map' ),
+				'label'   => __( 'Rail and transit', 'prodev17-location-map' ),
 				'color'   => '#d0d0d0',
 				'opacity' => true,
 			),
 			'boundary'       => array(
-				'label'   => __( 'Borders', 'office-map' ),
+				'label'   => __( 'Borders', 'prodev17-location-map' ),
 				'color'   => '#a3a3a3',
 				'opacity' => false,
 			),
 			'text'           => array(
-				'label'   => __( 'Labels (text)', 'office-map' ),
+				'label'   => __( 'Labels (text)', 'prodev17-location-map' ),
 				'color'   => '#5f6368',
 				'opacity' => false,
 			),
 			'text_halo'      => array(
-				'label'   => __( 'Label halo', 'office-map' ),
+				'label'   => __( 'Label halo', 'prodev17-location-map' ),
 				'color'   => '#ffffff',
 				'opacity' => false,
 			),
 			'poi'            => array(
-				'label'   => __( 'POI icons', 'office-map' ),
+				'label'   => __( 'POI icons', 'prodev17-location-map' ),
 				'color'   => '#5f6368',
 				'opacity' => false,
 			),
@@ -276,13 +276,13 @@ class Office_Map {
 	 */
 	public static function style_toggles() {
 		return array(
-			'hide_poi'       => __( 'Hide POI (points of interest)', 'office-map' ),
-			'hide_buildings' => __( 'Hide buildings (2D)', 'office-map' ),
-			'hide_3d'        => __( 'Hide 3D buildings', 'office-map' ),
-			'hide_terrain'   => __( 'Hide terrain (raster layer)', 'office-map' ),
-			'hide_boundary'  => __( 'Hide borders', 'office-map' ),
-			'hide_rail'      => __( 'Hide rail and transit', 'office-map' ),
-			'hide_labels'    => __( 'Hide all labels', 'office-map' ),
+			'hide_poi'       => __( 'Hide POI (points of interest)', 'prodev17-location-map' ),
+			'hide_buildings' => __( 'Hide buildings (2D)', 'prodev17-location-map' ),
+			'hide_3d'        => __( 'Hide 3D buildings', 'prodev17-location-map' ),
+			'hide_terrain'   => __( 'Hide terrain (raster layer)', 'prodev17-location-map' ),
+			'hide_boundary'  => __( 'Hide borders', 'prodev17-location-map' ),
+			'hide_rail'      => __( 'Hide rail and transit', 'prodev17-location-map' ),
+			'hide_labels'    => __( 'Hide all labels', 'prodev17-location-map' ),
 		);
 	}
 
@@ -388,20 +388,20 @@ class Office_Map {
 	 */
 	public static function map_languages() {
 		return array(
-			'auto' => __( 'Auto — leave labels as in the tiles', 'office-map' ),
-			'ru'   => __( 'Russian', 'office-map' ),
-			'be'   => __( 'Belarusian', 'office-map' ),
-			'en'   => __( 'English', 'office-map' ),
-			'uk'   => __( 'Ukrainian', 'office-map' ),
-			'de'   => __( 'German', 'office-map' ),
-			'fr'   => __( 'French', 'office-map' ),
-			'pl'   => __( 'Polish', 'office-map' ),
-			'lt'   => __( 'Lithuanian', 'office-map' ),
-			'lv'   => __( 'Latvian', 'office-map' ),
-			'es'   => __( 'Spanish', 'office-map' ),
-			'it'   => __( 'Italian', 'office-map' ),
-			'kk'   => __( 'Kazakh', 'office-map' ),
-			'zh'   => __( 'Chinese', 'office-map' ),
+			'auto' => __( 'Auto — leave labels as in the tiles', 'prodev17-location-map' ),
+			'ru'   => __( 'Russian', 'prodev17-location-map' ),
+			'be'   => __( 'Belarusian', 'prodev17-location-map' ),
+			'en'   => __( 'English', 'prodev17-location-map' ),
+			'uk'   => __( 'Ukrainian', 'prodev17-location-map' ),
+			'de'   => __( 'German', 'prodev17-location-map' ),
+			'fr'   => __( 'French', 'prodev17-location-map' ),
+			'pl'   => __( 'Polish', 'prodev17-location-map' ),
+			'lt'   => __( 'Lithuanian', 'prodev17-location-map' ),
+			'lv'   => __( 'Latvian', 'prodev17-location-map' ),
+			'es'   => __( 'Spanish', 'prodev17-location-map' ),
+			'it'   => __( 'Italian', 'prodev17-location-map' ),
+			'kk'   => __( 'Kazakh', 'prodev17-location-map' ),
+			'zh'   => __( 'Chinese', 'prodev17-location-map' ),
 		);
 	}
 
@@ -467,11 +467,11 @@ class Office_Map {
 					'ajaxurl' => admin_url( 'admin-ajax.php' ),
 					'nonce'   => wp_create_nonce( 'office_map_geocode' ),
 					'i18n'    => array(
-						'searchPlaceholder' => __( 'Search address…', 'office-map' ),
-						'searchButton'      => __( 'Find', 'office-map' ),
-						'searching'         => __( 'Searching…', 'office-map' ),
-						'nothingFound'      => __( 'Nothing found', 'office-map' ),
-						'searchError'       => __( 'Search error', 'office-map' ),
+						'searchPlaceholder' => __( 'Search address…', 'prodev17-location-map' ),
+						'searchButton'      => __( 'Find', 'prodev17-location-map' ),
+						'searching'         => __( 'Searching…', 'prodev17-location-map' ),
+						'nothingFound'      => __( 'Nothing found', 'prodev17-location-map' ),
+						'searchError'       => __( 'Search error', 'prodev17-location-map' ),
 					),
 				)
 			);
@@ -810,33 +810,7 @@ class Office_Map {
 	}
 
 	/**
-	 * Build a readable label from Photon properties.
-	 *
-	 * @param array $p Properties.
-	 * @return string
-	 */
-	public static function format_photon_label( $p ) {
-		$parts = array();
-
-		if ( ! empty( $p['name'] ) ) {
-			$parts[] = $p['name'];
-		}
-		$street = trim( ( isset( $p['street'] ) ? $p['street'] : '' ) . ' ' . ( isset( $p['housenumber'] ) ? $p['housenumber'] : '' ) );
-		if ( '' !== $street ) {
-			$parts[] = $street;
-		}
-		foreach ( array( 'city', 'district', 'state', 'postcode', 'country' ) as $key ) {
-			if ( ! empty( $p[ $key ] ) ) {
-				$parts[] = $p[ $key ];
-			}
-		}
-
-		$parts = array_values( array_unique( $parts ) );
-		return implode( ', ', $parts );
-	}
-
-	/**
-	 * AJAX proxy for the geocoder (Nominatim / Photon).
+	 * AJAX proxy for the Nominatim geocoder.
 	 *
 	 * @return void
 	 */
@@ -875,7 +849,7 @@ class Office_Map {
 	}
 
 	/**
-	 * Geocoder request: Nominatim (primary) and Photon (fallback).
+	 * Geocoder request: Nominatim (OpenStreetMap).
 	 *
 	 * @param string $q Search query.
 	 * @return array List of ['label','lat','lng'].
@@ -886,7 +860,7 @@ class Office_Map {
 		$lang = ( 'auto' !== $opt['map_lang'] ) ? $opt['map_lang'] : substr( (string) get_locale(), 0, 2 );
 
 		$contact = sanitize_email( get_option( 'admin_email' ) );
-		$ua      = 'Office Map WordPress Plugin (' . home_url( '/' ) . ( $contact ? '; ' . $contact : '' ) . ')';
+		$ua      = 'Prodev17 Location Map WordPress Plugin (' . home_url( '/' ) . ( $contact ? '; ' . $contact : '' ) . ')';
 		$out     = array();
 
 		// Primary: Nominatim (OpenStreetMap).
@@ -923,46 +897,6 @@ class Office_Map {
 						'label' => $label ? $label : sprintf( '%.5f, %.5f', $row['lat'], $row['lon'] ),
 						'lat'   => (float) $row['lat'],
 						'lng'   => (float) $row['lon'],
-					);
-				}
-			}
-		}
-
-		if ( $out ) {
-			return $out;
-		}
-
-		// Fallback: Photon (Komoot).
-		$pargs = array(
-			'q'     => $q,
-			'limit' => 5,
-		);
-		if ( in_array( $lang, array( 'de', 'fr', 'en' ), true ) ) {
-			$pargs['lang'] = $lang;
-		}
-
-		$presp = wp_remote_get(
-			add_query_arg( $pargs, 'https://photon.komoot.io/api/' ),
-			array(
-				'timeout' => 8,
-				'headers' => array( 'User-Agent' => $ua ),
-			)
-		);
-
-		if ( ! is_wp_error( $presp ) ) {
-			$pbody = json_decode( wp_remote_retrieve_body( $presp ), true );
-			if ( ! empty( $pbody['features'] ) && is_array( $pbody['features'] ) ) {
-				foreach ( $pbody['features'] as $feature ) {
-					$coords = isset( $feature['geometry']['coordinates'] ) ? $feature['geometry']['coordinates'] : null;
-					if ( ! is_array( $coords ) || count( $coords ) < 2 ) {
-						continue;
-					}
-					$props = isset( $feature['properties'] ) ? $feature['properties'] : array();
-					$label = self::format_photon_label( $props );
-					$out[] = array(
-						'label' => $label ? $label : sprintf( '%.5f, %.5f', $coords[1], $coords[0] ),
-						'lat'   => (float) $coords[1],
-						'lng'   => (float) $coords[0],
 					);
 				}
 			}

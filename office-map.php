@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name: Office Map – OpenStreetMap Map Without API Key
- * Plugin URI:  https://wordpress.org/plugins/office-map/
+ * Plugin Name: Prodev17 Location Map with OpenStreetMap
+ * Plugin URI:  https://wordpress.org/plugins/prodev17-location-map/
  * Description: Interactive vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor, with ready-made look presets and 17 stylable layers.
  * Version:     1.9.0
  * Requires at least: 6.0
  * Requires PHP: 7.4
- * Author:      Prodevel
- * Author URI:  https://wpdev.com.ru
+ * Author:      prodev17
+ * Author URI:  https://profiles.wordpress.org/prodev17/
  * License:     GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: office-map
+ * Text Domain: prodev17-location-map
  * Domain Path: /languages
  *
  * @package Office_Map

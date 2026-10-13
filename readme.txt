@@ -1,4 +1,4 @@
-=== Office Map – OpenStreetMap Map Without API Key ===
+=== Prodev17 Location Map with OpenStreetMap ===
 Contributors: prodev17
 Tags: map, maps, openstreetmap, maplibre, location
 Requires at least: 6.0
@@ -12,7 +12,7 @@ Beautiful vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads
 
 == Description ==
 
-**Office Map** adds a fast, modern **vector** map to your site using **MapLibre GL JS** and open **OpenStreetMap** data. No Google or Yandex account, no API keys, no ads, no tracking.
+**Prodev17 Location Map** adds a fast, modern **vector** map to your site using **MapLibre GL JS** and open **OpenStreetMap** data. No Google or Yandex account, no API keys, no ads, no tracking.
 
 It is perfect for an office or contact page, or for several locations. Drop the `[office_map]` shortcode anywhere, or add the widget to a sidebar.
 
@@ -48,26 +48,25 @@ You can override individual options:
 
 = External services =
 
-This plugin relies on the following third-party services. Nothing is sent to them unless a feature that needs them is used.
+This plugin connects to external services only when a feature that needs them is used. The map is loaded whenever it is displayed; the address search is **off by default** and is used only when you enable it (or when you use the address search on the settings page).
 
-* **OpenFreeMap** (`tiles.openfreemap.org`) — vector map tiles and styles, built on OpenStreetMap data. Loaded whenever a map is displayed. See <https://openfreemap.org/>.
-* **Nominatim** (`nominatim.openstreetmap.org`) — OpenStreetMap geocoding. Used **only** when the on-map search is enabled (off by default) or when you use the address search on the settings page. See the usage policy: <https://operations.osmfoundation.org/policies/nominatim/>.
-* **Photon** (`photon.komoot.io`) — a fallback geocoder by Komoot, used only if Nominatim returns no result. See <https://photon.komoot.io/>.
+* **OpenFreeMap** (`tiles.openfreemap.org`) — vector map tiles, styles, fonts and icons built from OpenStreetMap data. Loaded every time a map is displayed. No account, no API key and no cookies are used. Data sent: only the standard tile/style requests for the map area being viewed. Privacy policy: <https://openfreemap.org/privacy/>. Project: <https://openfreemap.org/>.
+* **Nominatim** (`nominatim.openstreetmap.org`) — OpenStreetMap geocoding, used **only** for the address search. Data sent: the text you type, plus the site URL and the site administrator's email in the `User-Agent` header, as required by the service's usage policy. Requests are limited to one per second and cached for one day. Usage policy (terms of use): <https://operations.osmfoundation.org/policies/nominatim/>. Privacy policy: <https://osmfoundation.org/wiki/Privacy_Policy>.
 
-Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, available under the ODbL. The map attribution is required by that license and must not be removed.
+Map data © OpenStreetMap contributors, available under the ODbL: <https://www.openstreetmap.org/copyright>. The map attribution is required by that license and must not be removed.
 
 = Privacy =
 
-* The map itself is served without cookies or tracking.
-* The on-map search is disabled by default. When enabled, the typed query is sent to the geocoding services listed above; requests are rate-limited and cached.
-* No data is collected by the plugin author.
+* The map tiles are loaded from OpenFreeMap without cookies or tracking.
+* The address search is disabled by default. When you enable it, the text you type is sent (through your own server) to OpenStreetMap Nominatim; requests are rate-limited and cached. Nothing else is sent.
+* No data is collected or stored by the plugin author; the plugin does not create accounts and does not track users.
 
 == Installation ==
 
-1. Install the plugin from the WordPress plugin directory, or upload the `office-map` folder to `/wp-content/plugins/`.
+1. Install the plugin from the WordPress plugin directory, or upload the `prodev17-location-map` folder to `/wp-content/plugins/`.
 2. Activate the plugin through the "Plugins" screen.
-3. Open **Office Map** in the admin menu and set your coordinates and address.
-4. Add the `[office_map]` shortcode to the page with your office, or use the "Office Map" widget.
+3. Open **Prodev17 Location Map** in the admin menu and set your coordinates and address.
+4. Add the `[office_map]` shortcode to the page with your office, or use the "Prodev17 Location Map" widget.
 
 == Frequently Asked Questions ==
 
@@ -106,13 +105,15 @@ Development happens at <https://github.com/pro-d-e-v/Office_map>.
 == Changelog ==
 
 = 1.9.0 =
-* English is now the source language; all user-facing strings are translatable (text domain `office-map`).
+* Renamed the plugin to "Prodev17 Location Map with OpenStreetMap"; the text domain is now `prodev17-location-map`.
+* English is now the source language; all user-facing strings are translatable.
 * MapLibre GL JS is now bundled locally (5.24.0) — no code is loaded from a third-party CDN.
 * The on-map address search is off by default and is clearly documented as an external service.
-* Geocoder requests now use a proper User-Agent with a contact address.
+* The address search now uses OpenStreetMap Nominatim only (the Photon fallback was removed).
+* Geocoder requests use a proper User-Agent with a contact address, are rate-limited and cached.
 * Added `uninstall.php` to clean up options and transients on deletion.
 * Modernized the plugin headers; requires WordPress 6.0 and PHP 7.4.
-* Added `languages/office-map.pot` for translators.
+* Added a `languages/*.pot` template for translators (translation files are served by translate.wordpress.org).
 
 = 1.8.0 =
 * The open/closed state of the settings blocks is saved with the settings. Only the first block is open by default; open the ones you need and press "Save" — they stay open after reload.
@@ -164,4 +165,4 @@ Development happens at <https://github.com/pro-d-e-v/Office_map>.
 == Upgrade Notice ==
 
 = 1.9.0 =
-All UI strings are now translatable, MapLibre GL JS is bundled locally, and the on-map search is off by default. No action is required.
+Renamed to "Prodev17 Location Map with OpenStreetMap", MapLibre GL JS is bundled locally, and the on-map search is off by default. No action is required.
