@@ -7,8 +7,12 @@ on:
 
 jobs:
   php:
-    name: PHP lint and coding standards
+    name: PHP ${{ matrix.php }} lint and coding standards
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ '7.4', '8.1', '8.2' ]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -16,8 +20,8 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
-          tools: composer, cs2pr
+          php-version: ${{ matrix.php }}
+          tools: composer
 
       - name: Lint PHP files
         run: find . -name '*.php' -not -path './assets/vendor/*' -print0 | xargs -0 -n1 -P4 php -l
@@ -33,4 +37,4 @@ jobs:
             phpcsstandards/phpcsextra:^1.2
 
       - name: Run PHPCS (WordPress standard)
-        run: ~/.composer/vendor/bin/phpcs --standard=WordPress --extensions=php --ignore=*/vendor/* .
+        run: '"$(composer global config bin-dir --absolute)/phpcs" --standard=WordPress --extensions=php --ignore=*/vendor/* .'
