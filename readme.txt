@@ -94,7 +94,7 @@ From OpenFreeMap, which serves OpenStreetMap-based vector tiles. No OpenStreetMa
 
 All source is shipped with the plugin: the PHP, JavaScript and CSS are readable and unminified, and no build step is required to run it. The bundled MapLibre GL JS library keeps its own 3-Clause BSD license and attribution in `assets/vendor/maplibre-gl/`.
 
-Development happens at <https://github.com/pro-d-e-v/Office_map>.
+Development happens at <https://github.com/pro-d-e-v/prodev17-location-map>.
 
 == Screenshots ==
 
