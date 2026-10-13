@@ -36,19 +36,6 @@ if ( is_admin() ) {
 }
 
 /**
- * Load the plugin text domain for translations.
- *
- * WordPress.org installs are translated automatically since WP 4.6, but loading
- * here also covers manual installs (for example from GitHub).
- *
- * @return void
- */
-function office_map_load_textdomain() {
-	load_plugin_textdomain( 'office-map', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'init', 'office_map_load_textdomain' );
-
-/**
  * Register the widget.
  *
  * @return void
