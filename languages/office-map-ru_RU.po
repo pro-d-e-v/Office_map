@@ -26,7 +26,7 @@ msgstr "Интерактивные векторные карты на OpenStreet
 msgid "Prodevel"
 msgstr ""
 
-msgid "https://profiles.wordpress.org/"
+msgid "https://wpdev.com.ru"
 msgstr ""
 
 msgid "Office Map"

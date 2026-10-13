@@ -1,5 +1,5 @@
 === Office Map – OpenStreetMap Map Without API Key ===
-Contributors: prodevel
+Contributors: prodev17
 Tags: map, maps, openstreetmap, maplibre, location
 Requires at least: 6.0
 Tested up to: 7.1
@@ -90,6 +90,12 @@ Yes. The search is off by default; the map works fully without it, and no reques
 = Where do the map tiles come from? =
 
 From OpenFreeMap, which serves OpenStreetMap-based vector tiles. No OpenStreetMap editing or hosting account is required.
+
+== Screenshots ==
+
+1. The settings page with a live map preview.
+2. Collapsible settings blocks: additional markers, size and zoom, appearance, map styling and behaviour.
+3. Import and export of settings as JSON, plus how to place the map on a page.
 
 == Changelog ==
 
