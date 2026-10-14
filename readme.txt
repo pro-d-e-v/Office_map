@@ -98,9 +98,10 @@ Development happens at <https://github.com/pro-d-e-v/prodev17-location-map>.
 
 == Screenshots ==
 
-1. The settings page with a live map preview.
+1. Main address settings: coordinates, marker and popup.
 2. Collapsible settings blocks: additional markers, size and zoom, appearance, map styling and behaviour.
-3. Import and export of settings as JSON, plus how to place the map on a page.
+3. Live map preview on the settings page.
+4. Import and export of settings as JSON, plus how to place the map on a page.
 
 == Changelog ==
 
