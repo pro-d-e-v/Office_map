@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The same list, formatted
 for the WordPress plugin directory, lives in `readme.txt`.
 
+## [Unreleased]
+
+* Renamed the plugin to "PD17 Map — OpenStreetMap Vector Maps" (display name only;
+  the slug, text domain and version are unchanged).
+* `readme.txt`: updated `Tested up to` to the current WordPress release.
+
 ## [1.9.1]
 
 * Renamed the plugin to "PD17 Map" (slug and text domain unchanged: `prodev17-location-map`).

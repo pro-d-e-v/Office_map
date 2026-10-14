@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: PD17 Map
+ * Plugin Name: PD17 Map — OpenStreetMap Vector Maps
  * Plugin URI:  https://wordpress.org/plugins/prodev17-location-map/
  * Description: Interactive vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor, with ready-made look presets and 17 stylable layers.
  * Version:     1.9.1

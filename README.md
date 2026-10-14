@@ -1,4 +1,4 @@
-# PD17 Map
+# PD17 Map — OpenStreetMap Vector Maps
 
 Interactive **vector** maps for WordPress, built on **MapLibre GL JS** and open
 **OpenStreetMap** data (OpenFreeMap tiles). No API keys, no ads, no tracking.
