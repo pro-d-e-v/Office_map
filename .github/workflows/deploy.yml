@@ -5,6 +5,10 @@ on:
     tags:
       - '*'
 
+concurrency:
+  group: wp-org-svn
+  cancel-in-progress: false
+
 jobs:
   deploy:
     name: Deploy tag to WordPress.org

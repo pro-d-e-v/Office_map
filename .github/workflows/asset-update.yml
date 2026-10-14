@@ -5,7 +5,12 @@ on:
     branches: [ main ]
     paths:
       - '.wordpress-org/**'
+      - 'readme.txt'
   workflow_dispatch:
+
+concurrency:
+  group: wp-org-svn
+  cancel-in-progress: false
 
 jobs:
   assets:
@@ -22,3 +27,5 @@ jobs:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SLUG: prodev17-location-map
           ASSETS_DIR: .wordpress-org
+          # Deploy readme.txt + assets even when the commit also contains code changes.
+          IGNORE_OTHER_FILES: true
