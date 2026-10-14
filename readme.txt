@@ -70,25 +70,49 @@ Map data © OpenStreetMap contributors, available under the ODbL: <https://www.o
 
 == Frequently Asked Questions ==
 
-= Do I need an API key? =
+= Do I need a Google Maps API key? =
 
-No. OpenFreeMap tiles and OpenStreetMap data are open and require no account or key.
+No. PD17 Map does not use Google or Yandex at all. It renders OpenStreetMap data with MapLibre GL JS, so there is no API key, no billing account and no usage quota.
 
-= Is attribution required? =
+= How do I add a map to a page? =
 
-Yes. Attribution for OpenStreetMap and OpenFreeMap is added automatically and must not be removed.
+Add the `[office_map]` shortcode (a Shortcode block in the block editor, or the classic editor), or place the "PD17 Map" widget in a sidebar. The map uses the settings from the plugin page, and you can override individual options directly in the shortcode.
 
-= Can I show several maps on one page? =
+= Can I use it as a contact or office map? =
 
-Yes. Each map gets a unique identifier and works independently.
+Yes, this is the main use case. Set the coordinates and the address once and drop the map on your contact page, in the footer or in a sidebar.
+
+= Can I show several locations on one map? =
+
+Yes. Add several markers, each with its own icon, color and popup, and let the map fit all of them automatically, or set a fixed zoom.
+
+= Can I change the colors and hide map layers? =
+
+Yes. The visual style editor lets you recolor 17 layer categories (roads, water, parks, buildings, labels, POI and more) and hide anything you do not need, plus ready-made look presets.
+
+= Does it work without cookies or tracking? =
+
+Yes. The map is loaded without accounts, cookies or analytics, which makes it a good fit for privacy-focused and GDPR-sensitive sites.
 
 = Can I use it without the address search? =
 
 Yes. The search is off by default; the map works fully without it, and no request is made to any geocoder.
 
+= Can I show several maps on one page? =
+
+Yes. Each map gets a unique identifier and works independently.
+
+= Is attribution required? =
+
+Yes. Attribution for OpenStreetMap and OpenFreeMap is added automatically and must not be removed.
+
 = Where do the map tiles come from? =
 
 From OpenFreeMap, which serves OpenStreetMap-based vector tiles. No OpenStreetMap editing or hosting account is required.
+
+= Is the plugin translated? =
+
+The plugin is translation-ready (English is the source language) and is translated on translate.wordpress.org.
 
 == Source code ==
 
