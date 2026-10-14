@@ -1,0 +1,24 @@
+name: Update WordPress.org assets
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.wordpress-org/**'
+  workflow_dispatch:
+
+jobs:
+  assets:
+    name: Deploy assets to WordPress.org
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update WordPress.org assets
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: prodev17-location-map
+          ASSETS_DIR: .wordpress-org
