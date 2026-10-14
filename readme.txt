@@ -118,7 +118,7 @@ The plugin is translation-ready (English is the source language) and is translat
 
 All source is shipped with the plugin: the PHP, JavaScript and CSS are readable and unminified, and no build step is required to run it. The bundled MapLibre GL JS library keeps its own 3-Clause BSD license and attribution in `assets/vendor/maplibre-gl/`.
 
-Development happens at <https://github.com/pro-d-e-v/prodev17-location-map>.
+Development happens at <https://github.com/pro-d-e-v/pd17-location-map>.
 
 == Screenshots ==
 
