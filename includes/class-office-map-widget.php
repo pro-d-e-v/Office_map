@@ -1,6 +1,6 @@
 <?php
 /**
- * The "Prodev17 Location Map" widget.
+ * The "PD17 Map" widget.
  *
  * @package Office_Map
  */
@@ -20,9 +20,9 @@ class Office_Map_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'office_map_widget',
-			__( 'Prodev17 Location Map', 'prodev17-location-map' ),
+			__( 'PD17 Map', 'prodev17-location-map' ),
 			array(
-				'description'                 => __( 'An office map (MapLibre + OpenStreetMap) without Google or Yandex.', 'prodev17-location-map' ),
+				'description'                 => __( 'A location map (MapLibre + OpenStreetMap) without Google or Yandex.', 'prodev17-location-map' ),
 				'customize_selective_refresh' => true,
 			)
 		);
@@ -85,7 +85,7 @@ class Office_Map_Widget extends WP_Widget {
 				esc_attr( $value )
 			);
 		}
-		echo '<p class="description">' . esc_html__( 'Empty fields use the values from the Prodev17 Location Map settings page.', 'prodev17-location-map' ) . '</p>';
+		echo '<p class="description">' . esc_html__( 'Empty fields use the values from the PD17 Map settings page.', 'prodev17-location-map' ) . '</p>';
 	}
 
 	/**

@@ -1,10 +1,10 @@
-# Prodev17 Location Map with OpenStreetMap
+# PD17 Map
 
 Interactive **vector** maps for WordPress, built on **MapLibre GL JS** and open
 **OpenStreetMap** data (OpenFreeMap tiles). No API keys, no ads, no tracking.
 
 * Shortcode: `[office_map]`
-* Widget: "Prodev17 Location Map"
+* Widget: "PD17 Map"
 * Visual settings page with a live preview
 * 17 stylable layer categories, ready-made look presets, multilingual labels
 * Optional address search (off by default)
@@ -19,8 +19,8 @@ Interactive **vector** maps for WordPress, built on **MapLibre GL JS** and open
 
 1. Copy the `prodev17-location-map` folder into `wp-content/plugins/`.
 2. Activate the plugin in **Plugins**.
-3. Open **Prodev17 Location Map** in the admin menu and set your coordinates and address.
-4. Add `[office_map]` to a page, or use the "Prodev17 Location Map" widget.
+3. Open **PD17 Map** in the admin menu and set your coordinates and address.
+4. Add `[office_map]` to a page, or use the "PD17 Map" widget.
 
 ## Development
 

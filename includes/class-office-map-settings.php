@@ -69,8 +69,8 @@ class Office_Map_Settings {
 	 */
 	public function add_menu() {
 		add_menu_page(
-			__( 'Prodev17 Location Map', 'prodev17-location-map' ),
-			__( 'Prodev17 Location Map', 'prodev17-location-map' ),
+			__( 'PD17 Map', 'prodev17-location-map' ),
+			__( 'PD17 Map', 'prodev17-location-map' ),
 			'manage_options',
 			$this->slug,
 			array( $this, 'render_page' ),
@@ -1144,7 +1144,7 @@ class Office_Map_Settings {
 		}
 		?>
 		<div class="wrap office-map-wrap">
-			<h1><?php esc_html_e( 'Prodev17 Location Map', 'prodev17-location-map' ); ?></h1>
+			<h1><?php esc_html_e( 'PD17 Map', 'prodev17-location-map' ); ?></h1>
 			<?php
 			// Read-only status flags shown after a redirect.
 			$om_imported = isset( $_GET['office_map_imported'] ) ? sanitize_text_field( wp_unslash( $_GET['office_map_imported'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only status flag.
@@ -1229,7 +1229,7 @@ class Office_Map_Settings {
 					<h2><?php esc_html_e( 'How to place the map', 'prodev17-location-map' ); ?></h2>
 					<p><?php esc_html_e( 'Shortcode — put it in a text/code block or any content area:', 'prodev17-location-map' ); ?></p>
 					<p><code>[office_map]</code></p>
-					<p><?php esc_html_e( 'Widget — “Appearance → Widgets”, the “Prodev17 Location Map” block.', 'prodev17-location-map' ); ?></p>
+					<p><?php esc_html_e( 'Widget — “Appearance → Widgets”, the “PD17 Map” block.', 'prodev17-location-map' ); ?></p>
 					<p><?php esc_html_e( 'Moving to another site: copy the wp-content/plugins/office-map/ folder and activate the plugin.', 'prodev17-location-map' ); ?></p>
 				</div>
 			</div>

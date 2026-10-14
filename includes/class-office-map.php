@@ -860,7 +860,7 @@ class Office_Map {
 		$lang = ( 'auto' !== $opt['map_lang'] ) ? $opt['map_lang'] : substr( (string) get_locale(), 0, 2 );
 
 		$contact = sanitize_email( get_option( 'admin_email' ) );
-		$ua      = 'Prodev17 Location Map WordPress Plugin (' . home_url( '/' ) . ( $contact ? '; ' . $contact : '' ) . ')';
+		$ua      = 'PD17 Map WordPress Plugin (' . home_url( '/' ) . ( $contact ? '; ' . $contact : '' ) . ')';
 		$out     = array();
 
 		// Primary: Nominatim (OpenStreetMap).

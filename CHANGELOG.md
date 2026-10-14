@@ -3,9 +3,14 @@
 All notable changes to this project are documented here. The same list, formatted
 for the WordPress plugin directory, lives in `readme.txt`.
 
+## [1.9.1]
+
+* Renamed the plugin to "PD17 Map" (slug and text domain unchanged: `prodev17-location-map`).
+* Refreshed the directory banner.
+
 ## [1.9.0]
 
-* Renamed to "Prodev17 Location Map with OpenStreetMap"; text domain is `prodev17-location-map`.
+* Renamed to "PD17 Map"; text domain is `prodev17-location-map`.
 * English is now the source language; all user-facing strings are translatable.
 * MapLibre GL JS is bundled locally (5.24.0) — no code is loaded from a third-party CDN.
 * The on-map address search is off by default and documented as an external service.

@@ -1,10 +1,10 @@
-=== Prodev17 Location Map with OpenStreetMap ===
+=== PD17 Map ===
 Contributors: prodev17
 Tags: map, maps, openstreetmap, maplibre, location
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.9.0
+Stable tag: 1.9.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Beautiful vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads
 
 == Description ==
 
-**Prodev17 Location Map** adds a fast, modern **vector** map to your site using **MapLibre GL JS** and open **OpenStreetMap** data. No Google or Yandex account, no API keys, no ads, no tracking.
+**PD17 Map** adds a fast, modern **vector** map to your site using **MapLibre GL JS** and open **OpenStreetMap** data. No Google or Yandex account, no API keys, no ads, no tracking.
 
 It is perfect for an office or contact page, or for several locations. Drop the `[office_map]` shortcode anywhere, or add the widget to a sidebar.
 
@@ -65,8 +65,8 @@ Map data © OpenStreetMap contributors, available under the ODbL: <https://www.o
 
 1. Install the plugin from the WordPress plugin directory, or upload the `prodev17-location-map` folder to `/wp-content/plugins/`.
 2. Activate the plugin through the "Plugins" screen.
-3. Open **Prodev17 Location Map** in the admin menu and set your coordinates and address.
-4. Add the `[office_map]` shortcode to the page with your office, or use the "Prodev17 Location Map" widget.
+3. Open **PD17 Map** in the admin menu and set your coordinates and address.
+4. Add the `[office_map]` shortcode to the page with your office, or use the "PD17 Map" widget.
 
 == Frequently Asked Questions ==
 
@@ -104,8 +104,12 @@ Development happens at <https://github.com/pro-d-e-v/prodev17-location-map>.
 
 == Changelog ==
 
+= 1.9.1 =
+* Renamed the plugin to "PD17 Map". The slug and text domain are unchanged (`prodev17-location-map`), so no action is required.
+* Refreshed the directory banner.
+
 = 1.9.0 =
-* Renamed the plugin to "Prodev17 Location Map with OpenStreetMap"; the text domain is now `prodev17-location-map`.
+* Renamed the plugin to "PD17 Map"; the text domain is now `prodev17-location-map`.
 * English is now the source language; all user-facing strings are translatable.
 * MapLibre GL JS is now bundled locally (5.24.0) — no code is loaded from a third-party CDN.
 * The on-map address search is off by default and is clearly documented as an external service.
@@ -164,5 +168,8 @@ Development happens at <https://github.com/pro-d-e-v/prodev17-location-map>.
 
 == Upgrade Notice ==
 
+= 1.9.1 =
+Renamed to "PD17 Map". The slug and text domain are unchanged. No action required.
+
 = 1.9.0 =
-Renamed to "Prodev17 Location Map with OpenStreetMap", MapLibre GL JS is bundled locally, and the on-map search is off by default. No action is required.
+Renamed to "PD17 Map", MapLibre GL JS is bundled locally, and the on-map search is off by default. No action is required.
