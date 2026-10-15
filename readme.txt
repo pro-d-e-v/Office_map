@@ -2,7 +2,7 @@
 Contributors: prodev17
 Tags: map, maps, openstreetmap, maplibre, location
 Requires at least: 6.0
-Tested up to: 7.1.3
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 1.9.1
 License: GPLv2 or later
