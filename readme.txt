@@ -8,13 +8,13 @@ Stable tag: 1.9.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Beautiful vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Shortcode, widget and a visual style editor.
+Beautiful vector maps with OpenStreetMap and MapLibre GL — no API keys, no ads, no tracking. Block, shortcode, widget and a visual style editor.
 
 == Description ==
 
 **PD17 Map** adds a fast, modern **vector** map to your site using **MapLibre GL JS** and open **OpenStreetMap** data. No Google or Yandex account, no API keys, no ads, no tracking.
 
-It is perfect for an office or contact page, or for several locations. Drop the `[office_map]` shortcode anywhere, or add the widget to a sidebar.
+It is perfect for an office or contact page, or for several locations. Add the **PD17 Map** block in the block editor, drop the `[office_map]` shortcode anywhere, or add the widget to a sidebar.
 
 = Why it stands out =
 
@@ -28,6 +28,7 @@ It is perfect for an office or contact page, or for several locations. Drop the 
 = Features =
 
 * `[office_map]` shortcode and a widget.
+* A **Gutenberg block** — insert the map straight from the block editor, with the same settings and a live preview.
 * Visual settings page with a live preview.
 * Multiple markers, each with its own icon, color and rich popup.
 * Optional on-map address search with server-side rate limiting and one-day caching.
