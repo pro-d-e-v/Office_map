@@ -126,6 +126,11 @@ Development happens at <https://github.com/pro-d-e-v/pd17-location-map>.
 2. Collapsible settings blocks: additional markers, size and zoom, appearance, map styling and behaviour.
 3. Live map preview on the settings page.
 4. Import and export of settings as JSON, plus how to place the map on a page.
+5. The vector map rendered on the front end, with a custom marker.
+6. Map styling — recolor 17 layer categories and set their opacity.
+7. Five base styles to choose from: Liberty, Bright, Positron, Dark and Fiord.
+8. Multilingual labels — pick the language of the map labels.
+9. Palette presets and behaviour options: markers, mouse-wheel zoom, on-map search, popup and fullscreen.
 
 == Changelog ==
 
