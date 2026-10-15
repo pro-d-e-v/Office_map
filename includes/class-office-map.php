@@ -52,6 +52,7 @@ class Office_Map {
 	 */
 	private function __construct() {
 		add_action( 'init', array( $this, 'register_assets' ) );
+		add_action( 'init', array( $this, 'register_block' ) );
 		add_shortcode( 'office_map', array( $this, 'shortcode' ) );
 		add_action( 'wp_ajax_office_map_geocode', array( $this, 'ajax_geocode' ) );
 		add_action( 'wp_ajax_nopriv_office_map_geocode', array( $this, 'ajax_geocode' ) );
@@ -445,6 +446,168 @@ class Office_Map {
 			OFFICE_MAP_VERSION,
 			true
 		);
+	}
+
+	/**
+	 * Turn a key => label map into options for a JS <select> control.
+	 *
+	 * A leading empty option lets the block fall back to the plugin settings.
+	 *
+	 * @param array $map Key => label pairs.
+	 * @return array List of ['label' => string, 'value' => string].
+	 */
+	public static function select_options( $map ) {
+		$out = array(
+			array(
+				'label' => __( 'Use the plugin setting', 'prodev17-location-map' ),
+				'value' => '',
+			),
+		);
+		foreach ( $map as $value => $label ) {
+			$out[] = array(
+				'label' => $label,
+				'value' => (string) $value,
+			);
+		}
+		return $out;
+	}
+
+	/**
+	 * Register the Gutenberg block (dynamic, rendered in PHP).
+	 *
+	 * @return void
+	 */
+	public function register_block() {
+		if ( ! function_exists( 'register_block_type' ) ) {
+			return;
+		}
+
+		wp_register_script(
+			'office-map-block',
+			OFFICE_MAP_URL . 'blocks/office-map/index.js',
+			array(
+				'wp-blocks',
+				'wp-element',
+				'wp-components',
+				'wp-block-editor',
+				'wp-i18n',
+				'wp-server-side-render',
+			),
+			OFFICE_MAP_VERSION,
+			true
+		);
+
+		if ( function_exists( 'wp_set_script_translations' ) ) {
+			wp_set_script_translations( 'office-map-block', 'prodev17-location-map', OFFICE_MAP_DIR . 'languages' );
+		}
+
+		wp_localize_script(
+			'office-map-block',
+			'PD17MapBlock',
+			array(
+				'styles'    => self::select_options( self::base_styles() ),
+				'palettes'  => self::select_options( self::palettes() ),
+				'languages' => self::select_options( self::map_languages() ),
+			)
+		);
+
+		register_block_type(
+			'prodev17/location-map',
+			array(
+				'api_version'     => 3,
+				'title'           => __( 'PD17 Map', 'prodev17-location-map' ),
+				'description'     => __( 'Show an interactive OpenStreetMap vector map. No API key, no ads, no tracking.', 'prodev17-location-map' ),
+				'category'        => 'widgets',
+				'icon'            => 'location-alt',
+				'keywords'        => array(
+					__( 'map', 'prodev17-location-map' ),
+					__( 'openstreetmap', 'prodev17-location-map' ),
+					__( 'location', 'prodev17-location-map' ),
+					__( 'office', 'prodev17-location-map' ),
+				),
+				'textdomain'      => 'prodev17-location-map',
+				'supports'        => array( 'html' => false ),
+				'editor_script'   => 'office-map-block',
+				'attributes'      => array(
+					'lat'        => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'lng'        => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'zoom'       => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'height'     => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'title'      => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'address'    => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'style'      => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'palette'    => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'lang'       => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'fullscreen' => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+					'search'     => array(
+						'type'    => 'string',
+						'default' => '',
+					),
+				),
+				'render_callback' => array( $this, 'render_block' ),
+			)
+		);
+	}
+
+	/**
+	 * Render the block on the front end and in the editor preview.
+	 *
+	 * Only non-empty attributes are forwarded, so anything left at "Use the
+	 * plugin setting" keeps the value saved on the plugin settings page.
+	 *
+	 * @param array $attributes Block attributes.
+	 * @return string
+	 */
+	public function render_block( $attributes ) {
+		$atts = array();
+
+		if ( ! is_array( $attributes ) ) {
+			$attributes = array();
+		}
+
+		foreach ( array( 'lat', 'lng', 'zoom', 'height', 'title', 'address', 'style', 'palette', 'lang' ) as $key ) {
+			if ( isset( $attributes[ $key ] ) && '' !== $attributes[ $key ] ) {
+				$atts[ $key ] = $attributes[ $key ];
+			}
+		}
+
+		foreach ( array( 'fullscreen', 'search' ) as $key ) {
+			if ( isset( $attributes[ $key ] ) && in_array( $attributes[ $key ], array( 'yes', 'no' ), true ) ) {
+				$atts[ $key ] = $attributes[ $key ];
+			}
+		}
+
+		return $this->shortcode( $atts );
 	}
 
 	/**

@@ -9,18 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-14T17:13:13+08:00\n"
+"POT-Creation-Date: 2026-10-15T13:42:49+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: prodev17-location-map\n"
 
 #. Plugin Name of the plugin
 #: office-map.php
-#: includes/class-office-map-settings.php:72
-#: includes/class-office-map-settings.php:73
-#: includes/class-office-map-settings.php:1147
-#: includes/class-office-map-widget.php:23
-msgid "PD17 Map"
+msgid "PD17 Map — OpenStreetMap Vector Maps"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -43,6 +39,14 @@ msgstr ""
 msgid "https://profiles.wordpress.org/prodev17/"
 msgstr ""
 
+#: includes/class-office-map-settings.php:72
+#: includes/class-office-map-settings.php:73
+#: includes/class-office-map-settings.php:1147
+#: includes/class-office-map-widget.php:23
+#: includes/class-office-map.php:518
+msgid "PD17 Map"
+msgstr ""
+
 #: includes/class-office-map-settings.php:108
 msgid "Marker image"
 msgstr ""
@@ -52,29 +56,29 @@ msgid "Use image"
 msgstr ""
 
 #: includes/class-office-map-settings.php:110
-#: includes/class-office-map.php:470
+#: includes/class-office-map.php:633
 msgid "Search address…"
 msgstr ""
 
 #: includes/class-office-map-settings.php:111
 #: includes/class-office-map-settings.php:630
 #: includes/class-office-map-settings.php:766
-#: includes/class-office-map.php:471
+#: includes/class-office-map.php:634
 msgid "Find"
 msgstr ""
 
 #: includes/class-office-map-settings.php:112
-#: includes/class-office-map.php:472
+#: includes/class-office-map.php:635
 msgid "Searching…"
 msgstr ""
 
 #: includes/class-office-map-settings.php:113
-#: includes/class-office-map.php:473
+#: includes/class-office-map.php:636
 msgid "Nothing found"
 msgstr ""
 
 #: includes/class-office-map-settings.php:114
-#: includes/class-office-map.php:474
+#: includes/class-office-map.php:637
 msgid "Search error"
 msgstr ""
 
@@ -83,12 +87,12 @@ msgid "Copied!"
 msgstr ""
 
 #: includes/class-office-map-settings.php:116
-#: includes/class-office-map.php:74
+#: includes/class-office-map.php:75
 msgid "Our office"
 msgstr ""
 
 #: includes/class-office-map-settings.php:117
-#: includes/class-office-map.php:75
+#: includes/class-office-map.php:76
 msgid "Add the office address"
 msgstr ""
 
@@ -195,11 +199,13 @@ msgid "Additional markers"
 msgstr ""
 
 #: includes/class-office-map-settings.php:236
+#: blocks/office-map/index.js:83
 msgid "Base style"
 msgstr ""
 
 #: includes/class-office-map-settings.php:241
 #: includes/class-office-map-widget.php:75
+#: blocks/office-map/index.js:89
 msgid "Palette"
 msgstr ""
 
@@ -220,37 +226,37 @@ msgid "Enable the layers you need and set their color and opacity. Applied on to
 msgstr ""
 
 #: includes/class-office-map-settings.php:259
-#: includes/class-office-map.php:279
+#: includes/class-office-map.php:280
 msgid "Hide POI (points of interest)"
 msgstr ""
 
 #: includes/class-office-map-settings.php:264
-#: includes/class-office-map.php:280
+#: includes/class-office-map.php:281
 msgid "Hide buildings (2D)"
 msgstr ""
 
 #: includes/class-office-map-settings.php:269
-#: includes/class-office-map.php:281
+#: includes/class-office-map.php:282
 msgid "Hide 3D buildings"
 msgstr ""
 
 #: includes/class-office-map-settings.php:274
-#: includes/class-office-map.php:282
+#: includes/class-office-map.php:283
 msgid "Hide terrain (raster layer)"
 msgstr ""
 
 #: includes/class-office-map-settings.php:279
-#: includes/class-office-map.php:283
+#: includes/class-office-map.php:284
 msgid "Hide borders"
 msgstr ""
 
 #: includes/class-office-map-settings.php:284
-#: includes/class-office-map.php:284
+#: includes/class-office-map.php:285
 msgid "Hide rail and transit"
 msgstr ""
 
 #: includes/class-office-map-settings.php:289
-#: includes/class-office-map.php:285
+#: includes/class-office-map.php:286
 msgid "Hide all labels"
 msgstr ""
 
@@ -389,10 +395,12 @@ msgid "+ Add marker"
 msgstr ""
 
 #: includes/class-office-map-settings.php:761
+#: blocks/office-map/index.js:49
 msgid "Latitude"
 msgstr ""
 
 #: includes/class-office-map-settings.php:762
+#: blocks/office-map/index.js:54
 msgid "Longitude"
 msgstr ""
 
@@ -517,6 +525,7 @@ msgid "A location map (MapLibre + OpenStreetMap) without Google or Yandex."
 msgstr ""
 
 #: includes/class-office-map-widget.php:70
+#: blocks/office-map/index.js:69
 msgid "Title"
 msgstr ""
 
@@ -524,178 +533,243 @@ msgstr ""
 msgid "Empty fields use the values from the PD17 Map settings page."
 msgstr ""
 
-#: includes/class-office-map.php:127
+#: includes/class-office-map.php:128
 msgid "Liberty (default, detailed)"
 msgstr ""
 
-#: includes/class-office-map.php:128
+#: includes/class-office-map.php:129
 msgid "Bright (vivid, detailed)"
 msgstr ""
 
-#: includes/class-office-map.php:129
+#: includes/class-office-map.php:130
 msgid "Positron (light, minimal)"
 msgstr ""
 
-#: includes/class-office-map.php:130
+#: includes/class-office-map.php:131
 msgid "Dark (dark)"
 msgstr ""
 
-#: includes/class-office-map.php:131
+#: includes/class-office-map.php:132
 msgid "Fiord (cool, muted)"
 msgstr ""
 
-#: includes/class-office-map.php:142
+#: includes/class-office-map.php:143
 msgid "Original (as in OpenFreeMap)"
 msgstr ""
 
-#: includes/class-office-map.php:143
+#: includes/class-office-map.php:144
 msgid "Bright and detailed"
 msgstr ""
 
-#: includes/class-office-map.php:144
+#: includes/class-office-map.php:145
 msgid "Warm and muted"
 msgstr ""
 
-#: includes/class-office-map.php:155
+#: includes/class-office-map.php:156
 msgid "Block (container width)"
 msgstr ""
 
-#: includes/class-office-map.php:156
+#: includes/class-office-map.php:157
 msgid "Full width (window width)"
 msgstr ""
 
-#: includes/class-office-map.php:157
+#: includes/class-office-map.php:158
 msgid "Custom (value and unit)"
 msgstr ""
 
-#: includes/class-office-map.php:168
+#: includes/class-office-map.php:169
 msgid "Fixed zoom"
 msgstr ""
 
-#: includes/class-office-map.php:169
+#: includes/class-office-map.php:170
 msgid "Fit all markers (auto)"
 msgstr ""
 
-#: includes/class-office-map.php:185
+#: includes/class-office-map.php:186
 msgid "Map background / land"
 msgstr ""
 
-#: includes/class-office-map.php:190
+#: includes/class-office-map.php:191
 msgid "Water"
 msgstr ""
 
-#: includes/class-office-map.php:195
+#: includes/class-office-map.php:196
 msgid "Rivers and canals"
 msgstr ""
 
-#: includes/class-office-map.php:200
+#: includes/class-office-map.php:201
 msgid "Parks and greenery"
 msgstr ""
 
-#: includes/class-office-map.php:205
+#: includes/class-office-map.php:206
 msgid "Forest"
 msgstr ""
 
-#: includes/class-office-map.php:210
+#: includes/class-office-map.php:211
 msgid "Sand and beaches"
 msgstr ""
 
-#: includes/class-office-map.php:215
+#: includes/class-office-map.php:216
 msgid "Ice and glaciers"
 msgstr ""
 
-#: includes/class-office-map.php:220
+#: includes/class-office-map.php:221
 msgid "Buildings (2D)"
 msgstr ""
 
-#: includes/class-office-map.php:225
+#: includes/class-office-map.php:226
 msgid "Roads"
 msgstr ""
 
-#: includes/class-office-map.php:230
+#: includes/class-office-map.php:231
 msgid "Road casing"
 msgstr ""
 
-#: includes/class-office-map.php:235
+#: includes/class-office-map.php:236
 msgid "Highways"
 msgstr ""
 
-#: includes/class-office-map.php:240
+#: includes/class-office-map.php:241
 msgid "Highway casing"
 msgstr ""
 
-#: includes/class-office-map.php:245
+#: includes/class-office-map.php:246
 msgid "Rail and transit"
 msgstr ""
 
-#: includes/class-office-map.php:250
+#: includes/class-office-map.php:251
 msgid "Borders"
 msgstr ""
 
-#: includes/class-office-map.php:255
+#: includes/class-office-map.php:256
 msgid "Labels (text)"
 msgstr ""
 
-#: includes/class-office-map.php:260
+#: includes/class-office-map.php:261
 msgid "Label halo"
 msgstr ""
 
-#: includes/class-office-map.php:265
+#: includes/class-office-map.php:266
 msgid "POI icons"
 msgstr ""
 
-#: includes/class-office-map.php:391
+#: includes/class-office-map.php:392
 msgid "Auto — leave labels as in the tiles"
 msgstr ""
 
-#: includes/class-office-map.php:392
+#: includes/class-office-map.php:393
 msgid "Russian"
 msgstr ""
 
-#: includes/class-office-map.php:393
+#: includes/class-office-map.php:394
 msgid "Belarusian"
 msgstr ""
 
-#: includes/class-office-map.php:394
+#: includes/class-office-map.php:395
 msgid "English"
 msgstr ""
 
-#: includes/class-office-map.php:395
+#: includes/class-office-map.php:396
 msgid "Ukrainian"
 msgstr ""
 
-#: includes/class-office-map.php:396
+#: includes/class-office-map.php:397
 msgid "German"
 msgstr ""
 
-#: includes/class-office-map.php:397
+#: includes/class-office-map.php:398
 msgid "French"
 msgstr ""
 
-#: includes/class-office-map.php:398
+#: includes/class-office-map.php:399
 msgid "Polish"
 msgstr ""
 
-#: includes/class-office-map.php:399
+#: includes/class-office-map.php:400
 msgid "Lithuanian"
 msgstr ""
 
-#: includes/class-office-map.php:400
+#: includes/class-office-map.php:401
 msgid "Latvian"
 msgstr ""
 
-#: includes/class-office-map.php:401
+#: includes/class-office-map.php:402
 msgid "Spanish"
 msgstr ""
 
-#: includes/class-office-map.php:402
+#: includes/class-office-map.php:403
 msgid "Italian"
 msgstr ""
 
-#: includes/class-office-map.php:403
+#: includes/class-office-map.php:404
 msgid "Kazakh"
 msgstr ""
 
-#: includes/class-office-map.php:404
+#: includes/class-office-map.php:405
 msgid "Chinese"
+msgstr ""
+
+#: includes/class-office-map.php:462
+#: blocks/office-map/index.js:23
+msgid "Use the plugin setting"
+msgstr ""
+
+#: includes/class-office-map.php:519
+msgid "Show an interactive OpenStreetMap vector map. No API key, no ads, no tracking."
+msgstr ""
+
+#: includes/class-office-map.php:523
+msgid "map"
+msgstr ""
+
+#: includes/class-office-map.php:524
+msgid "openstreetmap"
+msgstr ""
+
+#: includes/class-office-map.php:525
+msgid "location"
+msgstr ""
+
+#: includes/class-office-map.php:526
+msgid "office"
+msgstr ""
+
+#: blocks/office-map/index.js:26
+msgid "Yes"
+msgstr ""
+
+#: blocks/office-map/index.js:27
+msgid "No"
+msgstr ""
+
+#: blocks/office-map/index.js:47
+msgid "Map"
+msgstr ""
+
+#: blocks/office-map/index.js:59
+msgid "Zoom (1–20)"
+msgstr ""
+
+#: blocks/office-map/index.js:64
+msgid "Height (px)"
+msgstr ""
+
+#: blocks/office-map/index.js:74
+msgid "Address"
+msgstr ""
+
+#: blocks/office-map/index.js:81
+msgid "Look and behaviour"
+msgstr ""
+
+#: blocks/office-map/index.js:95
+msgid "Label language"
+msgstr ""
+
+#: blocks/office-map/index.js:101
+msgid "Fullscreen button"
+msgstr ""
+
+#: blocks/office-map/index.js:107
+msgid "Address search"
 msgstr ""
