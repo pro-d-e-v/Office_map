@@ -3,6 +3,7 @@
 Interactive **vector** maps for WordPress, built on **MapLibre GL JS** and open
 **OpenStreetMap** data (OpenFreeMap tiles). No API keys, no ads, no tracking.
 
+* Gutenberg block: "PD17 Map"
 * Shortcode: `[office_map]`
 * Widget: "PD17 Map"
 * Visual settings page with a live preview

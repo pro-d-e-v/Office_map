@@ -4,7 +4,7 @@ Tags: map, maps, openstreetmap, maplibre, location
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.9.1
+Stable tag: 1.9.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,11 @@ Development happens at <https://github.com/pro-d-e-v/pd17-location-map>.
 
 == Changelog ==
 
+= 1.9.2 =
+* New Gutenberg block: insert the map straight from the block editor, with the same settings and a live preview.
+* The directory display name is now "PD17 Map — OpenStreetMap Vector Maps" (slug and text domain unchanged).
+* Added five more directory screenshots: the front end, map styling, base styles, languages and behaviour.
+
 = 1.9.1 =
 * Renamed the plugin to "PD17 Map". The slug and text domain are unchanged (`prodev17-location-map`), so no action is required.
 * Refreshed the directory banner.
@@ -198,6 +203,9 @@ Development happens at <https://github.com/pro-d-e-v/pd17-location-map>.
 * First release.
 
 == Upgrade Notice ==
+
+= 1.9.2 =
+Added a Gutenberg block and refreshed the directory listing. No action required.
 
 = 1.9.1 =
 Renamed to "PD17 Map". The slug and text domain are unchanged. No action required.

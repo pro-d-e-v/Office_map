@@ -3,11 +3,14 @@
 All notable changes to this project are documented here. The same list, formatted
 for the WordPress plugin directory, lives in `readme.txt`.
 
-## [Unreleased]
+## [1.9.2]
 
-* Renamed the plugin to "PD17 Map — OpenStreetMap Vector Maps" (display name only;
-  the slug, text domain and version are unchanged).
-* `readme.txt`: updated `Tested up to` to the current WordPress release.
+* New Gutenberg block: insert the map straight from the block editor, with the same
+  settings and a live preview.
+* The directory display name is now "PD17 Map — OpenStreetMap Vector Maps" (slug and
+  text domain unchanged).
+* Added five more directory screenshots: the front end, map styling, base styles,
+  languages and behaviour.
 
 ## [1.9.1]
 
